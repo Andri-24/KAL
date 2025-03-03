@@ -185,7 +185,7 @@ $$
 
 ---
 
-### C. Tugas
+## C. Tugas
 #### a. Sistem Persamaan Dua Variabel
 ##### 1. Memiliki 1 Titik Potong
 $$
