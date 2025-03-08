@@ -149,7 +149,7 @@ $$
 $$
 \begin{bmatrix} 1 & 2 & 1 & 9 \\
                    0 & 1 & 1 & 5 \\
-                   0 & 0 & 1 & 16 \end{bmatrix}
+                   0 & 0 & 6 & 16 \end{bmatrix}
 $$
 
 #### **Langkah 2.5**: Jadikan elemen pivot ketiga (baris 3, kolom 3) bernilai 1
