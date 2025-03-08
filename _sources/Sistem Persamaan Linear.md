@@ -21,23 +21,23 @@ A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}
 $$
 
 #### b. Notasi:
-- \( R_1, R_2, R_3 \) untuk baris pertama, kedua, dan ketiga.
+- $R_1, R_2, R_3$ untuk baris pertama, kedua, dan ketiga.
 
 ---
 
 ### 2. Tiga Jenis Operasi Baris Elementer
 
 #### a. Menukar Dua Baris
-- **Notasi:** $$ R_i \leftrightarrow R_j $$
-- **Contoh:** Menukar baris pertama $$ R_1 $$ dengan baris kedua $$ R_2 $$
+- **Notasi:** $R_i \leftrightarrow R_j$
+- **Contoh:** Menukar baris pertama $R_1$ dengan baris kedua $R_2$
 
 #### b. Mengalikan Baris dengan Skalar Non-Nol
-- **Notasi:** $$ R_i \to k \cdot R_i $$ di mana $$ k \neq 0 $$
-- **Contoh:** Mengalikan baris pertama dengan 2 $$ 2R_1 $$
+- **Notasi:** $R_i \to k \cdot R_i$ di mana $k \neq 0$
+- **Contoh:** Mengalikan baris pertama dengan 2 jadi $2R_1$
 
 #### c. Menambahkan Kelipatan Satu Baris ke Baris Lain
-- **Notasi:** $$ R_i \to R_i + k \cdot R_j $$
-- **Contoh:** Menambahkan dua kali baris kedua ke baris pertama $$ R_1 \to R_1 + 2R_2 $$
+- **Notasi:** $R_i \to R_i + k \cdot R_j$
+- **Contoh:** Menambahkan dua kali baris kedua ke baris pertama $R_1 \to R_1 + 2R_2$
 
 ---
 
@@ -48,17 +48,17 @@ $$
 A = \begin{bmatrix} 1 & 2 & 3 \\ 4 & 5 & 6 \\ 7 & 8 & 9 \end{bmatrix}
 $$
 
-#### b. Langkah 1: Menukar \( R_1 \) dan \( R_2 \)
+#### b. Langkah 1: Menukar $R_1$ dan $R_2$
 $$
 \begin{bmatrix} 4 & 5 & 6 \\ 1 & 2 & 3 \\ 7 & 8 & 9 \end{bmatrix}
 $$
 
-#### c. Langkah 2: Mengalikan \( R_2 \) dengan 2
+#### c. Langkah 2: Mengalikan $R_2$ dengan 2
 $$
 \begin{bmatrix} 4 & 5 & 6 \\ 2 & 4 & 6 \\ 7 & 8 & 9 \end{bmatrix}
 $$
 
-#### d. Langkah 3: Menambahkan \(-2R_1\) ke \( R_3 \)
+#### d. Langkah 3: Menambahkan $-2R_1$ ke $R_3$
 $$
 \begin{bmatrix} 7 & 8 & 9 \\ 8 & 12 & 12 \\ -13 & -14 & -15 \end{bmatrix}
 $$
@@ -83,13 +83,13 @@ $$
 #### a. Langka 1. Tulis Matriks Augmentasi
 - Ubah SPL menjadi matriks augmentasi.
 - Contoh:
-$$
+
 \begin{aligned}
 x + 2y + z &= 9 \\
 2x + y - z &= 3 \\
 3x - y + 2z &= 8
 \end{aligned}
-$$
+
 
 $$
   \begin{bmatrix} 1 & 2 & 1 & 9 \\
@@ -104,7 +104,7 @@ $$
 #### **Langkah 2.1** : Jadikan elemen pivot pertama (baris 1, kolom 1) bernilai 1.
 - Sudah bernilai 1, jadi tidak perlu diubah.
 
-#### **Langkah 2.2** : Nolkan elemen di bawah pivot pertama \( R_2 \) dan \( R_3 \):
+#### **Langkah 2.2** : Nolkan elemen di bawah pivot pertama $R_2$ dan $R_3$ :
 - $$ R_2 \to R_2 - 2R_1 $$
 
 $$
@@ -143,7 +143,7 @@ $$
 $$
 
 
-#### **Langkah 2.4**: Nolkan elemen di bawah pivot kedua (R_3 )
+#### **Langkah 2.4**: Nolkan elemen di bawah pivot kedua $R_3$
 - $$ R_3 \to R_3 + 7R_2 $$
 
 $$
@@ -168,12 +168,12 @@ $$
  z = \frac{8}{3} 
 $$
 
-#### **Langkah 3.2**: Substitusi $$ z $$ ke baris kedua:
+#### **Langkah 3.2**: Substitusi $z$  ke baris kedua:
 $$
  y + z = 5 \Rightarrow y + \frac{8}{3} = 5 \Rightarrow y = \frac{7}{3}
 $$
 
-#### **Langkah 3.3**: Substitusi $$ y $$ dan $$ z $$ ke baris pertama:
+#### **Langkah 3.3**: Substitusi $y$ dan $z$ ke baris pertama:
 $$
  x + 2y + z = 9 \Rightarrow x + 2(\frac{7}{3}) + \frac{8}{3} = 9 \Rightarrow x = \frac{5}{3}
 $$
