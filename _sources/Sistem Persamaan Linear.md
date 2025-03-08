@@ -84,11 +84,11 @@ $$
 - Ubah SPL menjadi matriks augmentasi.
 - Contoh:
 
-\begin{aligned}
+$$\begin{aligned}
 x + 2y + z &= 9 \\
 2x + y - z &= 3 \\
 3x - y + 2z &= 8
-\end{aligned}
+\end{aligned}$$
 
 
 $$
