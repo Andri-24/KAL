@@ -60,7 +60,8 @@
     <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Sistem Persamaan Linear';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -401,8 +402,8 @@
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-langkah-3-substitusi-balik">c. Langkah 3 Substitusi Balik</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-1-dari-baris-terakhir"><strong>Langkah 3.1</strong>: Dari baris terakhir:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-2-substitusi-z-ke-baris-kedua"><strong>Langkah 3.2</strong>: Substitusi $$ z $$ ke baris kedua:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-3-substitusi-y-dan-z-ke-baris-pertama"><strong>Langkah 3.3</strong>: Substitusi $$ y $$ dan $$ z $$ ke baris pertama:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-2-substitusi-z-ke-baris-kedua"><strong>Langkah 3.2</strong>: Substitusi $<span class="math notranslate nohighlight">\( z \)</span>$ ke baris kedua:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-3-substitusi-y-dan-z-ke-baris-pertama"><strong>Langkah 3.3</strong>: Substitusi $<span class="math notranslate nohighlight">\( y \)</span><span class="math notranslate nohighlight">\( dan \)</span><span class="math notranslate nohighlight">\( z \)</span>$ ke baris pertama:</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-solusi-akhir">d. Solusi Akhir:</a></li>
@@ -435,7 +436,7 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="sistem-persamaan-linear">
+  <section class="tex2jax_ignore mathjax_ignore" id="sistem-persamaan-linear">
 <h1>Sistem Persamaan Linear<a class="headerlink" href="#sistem-persamaan-linear" title="Link to this heading">#</a></h1>
 <section id="a-pengertian">
 <h2>A. Pengertian<a class="headerlink" href="#a-pengertian" title="Link to this heading">#</a></h2>
@@ -449,9 +450,10 @@
 <h4>a. Definisi Matriks:<a class="headerlink" href="#a-definisi-matriks" title="Link to this heading">#</a></h4>
 <p>Matriks adalah kumpulan bilangan yang disusun dalam baris dan kolom.
 Contoh:</p>
-<p>$$
-A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \ 4 &amp; 5 &amp; 6 \ 7 &amp; 8 &amp; 9 \end{bmatrix}
-$$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="b-notasi">
 <h4>b. Notasi:<a class="headerlink" href="#b-notasi" title="Link to this heading">#</a></h4>
@@ -466,22 +468,22 @@ $$</p>
 <section id="a-menukar-dua-baris">
 <h4>a. Menukar Dua Baris<a class="headerlink" href="#a-menukar-dua-baris" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p><strong>Notasi:</strong> $$ R_i \leftrightarrow R_j $$</p></li>
-<li><p><strong>Contoh:</strong> Menukar baris pertama $$ R_1 $$ dengan baris kedua $$ R_2 $$</p></li>
+<li><p><strong>Notasi:</strong> $<span class="math notranslate nohighlight">\( R_i \leftrightarrow R_j \)</span>$</p></li>
+<li><p><strong>Contoh:</strong> Menukar baris pertama $<span class="math notranslate nohighlight">\( R_1 \)</span><span class="math notranslate nohighlight">\( dengan baris kedua \)</span><span class="math notranslate nohighlight">\( R_2 \)</span>$</p></li>
 </ul>
 </section>
 <section id="b-mengalikan-baris-dengan-skalar-non-nol">
 <h4>b. Mengalikan Baris dengan Skalar Non-Nol<a class="headerlink" href="#b-mengalikan-baris-dengan-skalar-non-nol" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p><strong>Notasi:</strong> $$ R_i \to k \cdot R_i $$ di mana $$ k \neq 0 $$</p></li>
-<li><p><strong>Contoh:</strong> Mengalikan baris pertama dengan 2 $$ 2R_1 $$</p></li>
+<li><p><strong>Notasi:</strong> $<span class="math notranslate nohighlight">\( R_i \to k \cdot R_i \)</span><span class="math notranslate nohighlight">\( di mana \)</span><span class="math notranslate nohighlight">\( k \neq 0 \)</span>$</p></li>
+<li><p><strong>Contoh:</strong> Mengalikan baris pertama dengan 2 $<span class="math notranslate nohighlight">\( 2R_1 \)</span>$</p></li>
 </ul>
 </section>
 <section id="c-menambahkan-kelipatan-satu-baris-ke-baris-lain">
 <h4>c. Menambahkan Kelipatan Satu Baris ke Baris Lain<a class="headerlink" href="#c-menambahkan-kelipatan-satu-baris-ke-baris-lain" title="Link to this heading">#</a></h4>
 <ul class="simple">
-<li><p><strong>Notasi:</strong> $$ R_i \to R_i + k \cdot R_j $$</p></li>
-<li><p><strong>Contoh:</strong> Menambahkan dua kali baris kedua ke baris pertama $$ R_1 \to R_1 + 2R_2 $$</p></li>
+<li><p><strong>Notasi:</strong> $<span class="math notranslate nohighlight">\( R_i \to R_i + k \cdot R_j \)</span>$</p></li>
+<li><p><strong>Contoh:</strong> Menambahkan dua kali baris kedua ke baris pertama $<span class="math notranslate nohighlight">\( R_1 \to R_1 + 2R_2 \)</span>$</p></li>
 </ul>
 </section>
 </section>
@@ -490,30 +492,31 @@ $$</p>
 <h3>3. Contoh Operasi Baris Elementer<a class="headerlink" href="#contoh-operasi-baris-elementer" title="Link to this heading">#</a></h3>
 <section id="a-matriks-awal">
 <h4>a. Matriks Awal:<a class="headerlink" href="#a-matriks-awal" title="Link to this heading">#</a></h4>
-<p>$$
-A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \ 4 &amp; 5 &amp; 6 \ 7 &amp; 8 &amp; 9 \end{bmatrix}
-$$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; 2 &amp; 3 \\ 4 &amp; 5 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="b-langkah-1-menukar-r-1-dan-r-2">
 <h4>b. Langkah 1: Menukar ( R_1 ) dan ( R_2 )<a class="headerlink" href="#b-langkah-1-menukar-r-1-dan-r-2" title="Link to this heading">#</a></h4>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f0a36bef-aa67-4fcb-81d6-599355dbfd8c">
-<span class="eqno">(1)<a class="headerlink" href="#equation-f0a36bef-aa67-4fcb-81d6-599355dbfd8c" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 4 &amp; 5 &amp; 6 \\ 1 &amp; 2 &amp; 3 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}\]</div>
-<p>$$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 4 &amp; 5 &amp; 6 \\ 1 &amp; 2 &amp; 3 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="c-langkah-2-mengalikan-r-2-dengan-2">
 <h4>c. Langkah 2: Mengalikan ( R_2 ) dengan 2<a class="headerlink" href="#c-langkah-2-mengalikan-r-2-dengan-2" title="Link to this heading">#</a></h4>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1b7e1963-3414-4d45-80de-21fc351135f0">
-<span class="eqno">(2)<a class="headerlink" href="#equation-1b7e1963-3414-4d45-80de-21fc351135f0" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 4 &amp; 5 &amp; 6 \\ 2 &amp; 4 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}\]</div>
-<p>$$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 4 &amp; 5 &amp; 6 \\ 2 &amp; 4 &amp; 6 \\ 7 &amp; 8 &amp; 9 \end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="d-langkah-3-menambahkan-2r-1-ke-r-3">
 <h4>d. Langkah 3: Menambahkan (-2R_1) ke ( R_3 )<a class="headerlink" href="#d-langkah-3-menambahkan-2r-1-ke-r-3" title="Link to this heading">#</a></h4>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-8ef75ac4-3252-4d62-bb5a-36038fd70c80">
-<span class="eqno">(3)<a class="headerlink" href="#equation-8ef75ac4-3252-4d62-bb5a-36038fd70c80" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 7 &amp; 8 &amp; 9 \\ 8 &amp; 12 &amp; 12 \\ -13 &amp; -14 &amp; -15 \end{bmatrix}\]</div>
-<p>$$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 7 &amp; 8 &amp; 9 \\ 8 &amp; 12 &amp; 12 \\ -13 &amp; -14 &amp; -15 \end{bmatrix}
+\end{split}\]</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -543,20 +546,20 @@ $$</p>
 <ul class="simple">
 <li><p>Ubah SPL menjadi matriks augmentasi.</p></li>
 <li><p>Contoh:
-$$
+$<span class="math notranslate nohighlight">\(
 \begin{aligned}
-x + 2y + z &amp;= 9 \
-2x + y - z &amp;= 3 \
+x + 2y + z &amp;= 9 \\
+2x + y - z &amp;= 3 \\
 3x - y + 2z &amp;= 8
 \end{aligned}
-$$</p></li>
+\)</span>$</p></li>
 </ul>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-640ff13c-8baa-40a0-97f8-4c7a71a5c6bb">
-<span class="eqno">(4)<a class="headerlink" href="#equation-640ff13c-8baa-40a0-97f8-4c7a71a5c6bb" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 1 &amp; 2 &amp; 1 &amp; 9 \\
-                 2 &amp; 1 &amp; -1 &amp; 3 \\
-                 3 &amp; -1 &amp; 2 &amp; 8 \end{bmatrix}\]</div>
-<p>$$</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+  \begin{bmatrix} 1 &amp; 2 &amp; 1 &amp; 9 \\
+                   2 &amp; 1 &amp; -1 &amp; 3 \\
+                   3 &amp; -1 &amp; 2 &amp; 8 \end{bmatrix}
+  \end{split}\]</div>
 </section>
 </section>
 <section id="b-langkah-2-bentuk-eselon-baris">
@@ -577,101 +580,114 @@ $$</p></li>
 </section>
 <section id="langkah-2-2-nolkan-elemen-di-bawah-pivot-pertama-r-2-dan-r-3">
 <h4><strong>Langkah 2.2</strong> : Nolkan elemen di bawah pivot pertama ( R_2 ) dan ( R_3 ):<a class="headerlink" href="#langkah-2-2-nolkan-elemen-di-bawah-pivot-pertama-r-2-dan-r-3" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>$$ R_2 \to R_2 - 2R_1 $$</p></li>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[ R_2 \to R_2 - 2R_1 \]</div>
+</li>
 </ul>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-384fd181-8e88-4980-8963-8b491a780777">
-<span class="eqno">(5)<a class="headerlink" href="#equation-384fd181-8e88-4980-8963-8b491a780777" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
 1 &amp; 2 &amp; 1 &amp; | 9 \\ 
 2 &amp; 1 &amp; -1 &amp; | 3 \\ 
 3 &amp; -1 &amp; 2 &amp; | 8 
-\end{bmatrix}\]</div>
-<p>\rightarrow</p>
-<div class="amsmath math notranslate nohighlight" id="equation-fc1f33fb-ca79-4421-8e1d-4d00db2e44ea">
-<span class="eqno">(6)<a class="headerlink" href="#equation-fc1f33fb-ca79-4421-8e1d-4d00db2e44ea" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 
+\end{bmatrix}
+\rightarrow
+\begin{bmatrix} 
 1 &amp; 2 &amp; 1 &amp; | 9 \\ 
 0 &amp; -3 &amp; -3 &amp; | -15 \\ 
 3 &amp; -1 &amp; 2 &amp; | 8 
-\end{bmatrix}\]</div>
-<p>$$</p>
-<ul class="simple">
-<li><p>$$ R_3 \to R_3 - 3R_1 $$</p></li>
+\end{bmatrix}
+\end{split}\]</div>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[ R_3 \to R_3 - 3R_1 \]</div>
+</li>
 </ul>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-c629b870-fefa-4359-a082-d1fcf847d9ad">
-<span class="eqno">(7)<a class="headerlink" href="#equation-c629b870-fefa-4359-a082-d1fcf847d9ad" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
 1 &amp; 2 &amp; 1 &amp; | 9 \\ 
 0 &amp; -3 &amp; -3 &amp; | -15 \\ 
 0 &amp; -7 &amp; -1 &amp; | -19 
-\end{bmatrix}\]</div>
-<p>$$</p>
+\end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="langkah-2-3-jadikan-elemen-pivot-kedua-baris-2-kolom-2-bernilai-1">
 <h4><strong>Langkah 2.3</strong>: Jadikan elemen pivot kedua (baris 2, kolom 2) bernilai 1.<a class="headerlink" href="#langkah-2-3-jadikan-elemen-pivot-kedua-baris-2-kolom-2-bernilai-1" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>$$ R_2 \to \frac{-1}{3} R_2 $$</p></li>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[ R_2 \to \frac{-1}{3} R_2 \]</div>
+</li>
 </ul>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-f36551dd-931e-4b45-a396-88c538df66d1">
-<span class="eqno">(8)<a class="headerlink" href="#equation-f36551dd-931e-4b45-a396-88c538df66d1" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 
 1 &amp; 2 &amp; 1 &amp; | 9 \\ 
 0 &amp; 1 &amp; 1 &amp; | 5 \\ 
 0 &amp; -7 &amp; -1 &amp; | -19 
-\end{bmatrix}\]</div>
-<p>$$</p>
+\end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="langkah-2-4-nolkan-elemen-di-bawah-pivot-kedua-r-3">
 <h4><strong>Langkah 2.4</strong>: Nolkan elemen di bawah pivot kedua (R_3 )<a class="headerlink" href="#langkah-2-4-nolkan-elemen-di-bawah-pivot-kedua-r-3" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>$$ R_3 \to R_3 + 7R_2 $$</p></li>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[ R_3 \to R_3 + 7R_2 \]</div>
+</li>
 </ul>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-bc124e96-4a06-40e5-840e-adb9bdf8b587">
-<span class="eqno">(9)<a class="headerlink" href="#equation-bc124e96-4a06-40e5-840e-adb9bdf8b587" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 1 &amp; 2 &amp; 1 &amp; 9 \\
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; 2 &amp; 1 &amp; 9 \\
                    0 &amp; 1 &amp; 1 &amp; 5 \\
-                   0 &amp; 0 &amp; 1 &amp; 16 \end{bmatrix}\]</div>
-<p>$$</p>
+                   0 &amp; 0 &amp; 1 &amp; 16 \end{bmatrix}
+\end{split}\]</div>
 </section>
 <section id="langkah-2-5-jadikan-elemen-pivot-ketiga-baris-3-kolom-3-bernilai-1">
 <h4><strong>Langkah 2.5</strong>: Jadikan elemen pivot ketiga (baris 3, kolom 3) bernilai 1<a class="headerlink" href="#langkah-2-5-jadikan-elemen-pivot-ketiga-baris-3-kolom-3-bernilai-1" title="Link to this heading">#</a></h4>
-<ul class="simple">
-<li><p>$$ R_3 \to \frac{1}{6} R_3 $$</p></li>
+<ul>
+<li><div class="math notranslate nohighlight">
+\[ R_3 \to \frac{1}{6} R_3 \]</div>
+</li>
 </ul>
-<p>$$</p>
-<div class="amsmath math notranslate nohighlight" id="equation-b29bd470-d0e1-4d3a-a02b-ec5123c33ec9">
-<span class="eqno">(10)<a class="headerlink" href="#equation-b29bd470-d0e1-4d3a-a02b-ec5123c33ec9" title="Permalink to this equation">#</a></span>\[\begin{bmatrix} 1 &amp; 2 &amp; 1 &amp; 9 \\
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; 2 &amp; 1 &amp; 9 \\
                    0 &amp; 1 &amp; 1 &amp; 5 \\
-                   0 &amp; 0 &amp; 1 &amp; \frac{8}{3} \end{bmatrix}\]</div>
-<p>$$</p>
+                   0 &amp; 0 &amp; 1 &amp; \frac{8}{3} \end{bmatrix}
+\end{split}\]</div>
 </section>
 </section>
 <section id="c-langkah-3-substitusi-balik">
 <h3>c. Langkah 3 Substitusi Balik<a class="headerlink" href="#c-langkah-3-substitusi-balik" title="Link to this heading">#</a></h3>
 <section id="langkah-3-1-dari-baris-terakhir">
 <h4><strong>Langkah 3.1</strong>: Dari baris terakhir:<a class="headerlink" href="#langkah-3-1-dari-baris-terakhir" title="Link to this heading">#</a></h4>
-<p>$$
-z = \frac{8}{3}
-$$</p>
+<div class="math notranslate nohighlight">
+\[
+ z = \frac{8}{3} 
+\]</div>
 </section>
 <section id="langkah-3-2-substitusi-z-ke-baris-kedua">
-<h4><strong>Langkah 3.2</strong>: Substitusi $$ z $$ ke baris kedua:<a class="headerlink" href="#langkah-3-2-substitusi-z-ke-baris-kedua" title="Link to this heading">#</a></h4>
-<p>$$
-y + z = 5 \Rightarrow y + \frac{8}{3} = 5 \Rightarrow y = \frac{7}{3}
-$$</p>
+<h4><strong>Langkah 3.2</strong>: Substitusi $<span class="math notranslate nohighlight">\( z \)</span>$ ke baris kedua:<a class="headerlink" href="#langkah-3-2-substitusi-z-ke-baris-kedua" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+ y + z = 5 \Rightarrow y + \frac{8}{3} = 5 \Rightarrow y = \frac{7}{3}
+\]</div>
 </section>
 <section id="langkah-3-3-substitusi-y-dan-z-ke-baris-pertama">
-<h4><strong>Langkah 3.3</strong>: Substitusi $$ y $$ dan $$ z $$ ke baris pertama:<a class="headerlink" href="#langkah-3-3-substitusi-y-dan-z-ke-baris-pertama" title="Link to this heading">#</a></h4>
-<p>$$
-x + 2y + z = 9 \Rightarrow x + 2(\frac{7}{3}) + \frac{8}{3} = 9 \Rightarrow x = \frac{5}{3}
-$$</p>
+<h4><strong>Langkah 3.3</strong>: Substitusi $<span class="math notranslate nohighlight">\( y \)</span><span class="math notranslate nohighlight">\( dan \)</span><span class="math notranslate nohighlight">\( z \)</span>$ ke baris pertama:<a class="headerlink" href="#langkah-3-3-substitusi-y-dan-z-ke-baris-pertama" title="Link to this heading">#</a></h4>
+<div class="math notranslate nohighlight">
+\[
+ x + 2y + z = 9 \Rightarrow x + 2(\frac{7}{3}) + \frac{8}{3} = 9 \Rightarrow x = \frac{5}{3}
+\]</div>
 </section>
 </section>
 <section id="d-solusi-akhir">
 <h3>d. Solusi Akhir:<a class="headerlink" href="#d-solusi-akhir" title="Link to this heading">#</a></h3>
-<p>$$
-x = \frac{5}{3}, \quad y = \frac{7}{3}, \quad z = \frac{8}{3}
-$$</p>
+<div class="math notranslate nohighlight">
+\[
+ x = \frac{5}{3}, \quad y = \frac{7}{3}, \quad z = \frac{8}{3}
+\]</div>
 </section>
 </section>
 <hr class="docutils" />
@@ -681,32 +697,35 @@ $$</p>
 <h3>a. Sistem Persamaan Dua Variabel<a class="headerlink" href="#a-sistem-persamaan-dua-variabel" title="Link to this heading">#</a></h3>
 <section id="memiliki-1-titik-potong">
 <h4>1. Memiliki 1 Titik Potong<a class="headerlink" href="#memiliki-1-titik-potong" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-y = 2x + 1 \
-y = -x + 4 \
+y = 2x + 1 \\
+y = -x + 4 \\
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/graphing/mprzavhw" width="800" height="600" style="border:0;"></iframe>
 </section>
 <section id="memiliki-banyak-titik-potong">
 <h4>2. Memiliki Banyak Titik Potong<a class="headerlink" href="#memiliki-banyak-titik-potong" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-y = 3x - 2 \
-2y = 6x - 4 \
+y = 3x - 2 \\
+2y = 6x - 4 \\
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/graphing/ydme3cuu" width="800" height="600" style="border:0;"></iframe>
 </section>
 <section id="tidak-memiliki-titik-potong">
 <h4>3. Tidak Memiliki  Titik Potong<a class="headerlink" href="#tidak-memiliki-titik-potong" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-y = 2x + 3 \
-y = 2x - 1 \
+y = 2x + 3 \\
+y = 2x - 1 \\
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/graphing/yrexaspt" width="800" height="600" style="border:0;"></iframe>
 </section>
 </section>
@@ -714,35 +733,38 @@ $$</p>
 <h3>b. Sistem Persamaan Tiga Variabel<a class="headerlink" href="#b-sistem-persamaan-tiga-variabel" title="Link to this heading">#</a></h3>
 <section id="id1">
 <h4>1. Memiliki 1 Titik Potong<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-x + y + z &amp;= 6 \
-2x - y + 3z &amp;= 14 \
+x + y + z &amp;= 6 \\
+2x - y + 3z &amp;= 14 \\
 -x + 2y - z &amp;= -2
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/3d/hed8kshm" width="800" height="600" style="border:0;"></iframe>
 </section>
 <section id="id2">
 <h4>2. Memiliki Banyak Titik Potong<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-x + y + z &amp;= 6 \
-2x + 2y + 2z &amp;= 12 \
+x + y + z &amp;= 6 \\
+2x + 2y + 2z &amp;= 12 \\
 3x + 3y + 3z &amp;= 18
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/3d/qpqra5sr" width="800" height="600" style="border:0;"></iframe>
 </section>
 <section id="id3">
 <h4>3. Tidak Memiliki Titik Potong<a class="headerlink" href="#id3" title="Link to this heading">#</a></h4>
-<p>$$
+<div class="math notranslate nohighlight">
+\[\begin{split}
 \begin{aligned}
-x + y + z &amp;= 6 \
-x + y + z &amp;= 8 \
+x + y + z &amp;= 6 \\
+x + y + z &amp;= 8 \\
 x + y + z &amp;= 10
 \end{aligned}
-$$</p>
+\end{split}\]</div>
 <iframe src="https://www.geogebra.org/3d/repkbdzz" width="800" height="600" style="border:0;"></iframe>
 </section>
 </section>
@@ -850,8 +872,8 @@ $$</p>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-langkah-3-substitusi-balik">c. Langkah 3 Substitusi Balik</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-1-dari-baris-terakhir"><strong>Langkah 3.1</strong>: Dari baris terakhir:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-2-substitusi-z-ke-baris-kedua"><strong>Langkah 3.2</strong>: Substitusi $$ z $$ ke baris kedua:</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-3-substitusi-y-dan-z-ke-baris-pertama"><strong>Langkah 3.3</strong>: Substitusi $$ y $$ dan $$ z $$ ke baris pertama:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-2-substitusi-z-ke-baris-kedua"><strong>Langkah 3.2</strong>: Substitusi $<span class="math notranslate nohighlight">\( z \)</span>$ ke baris kedua:</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#langkah-3-3-substitusi-y-dan-z-ke-baris-pertama"><strong>Langkah 3.3</strong>: Substitusi $<span class="math notranslate nohighlight">\( y \)</span><span class="math notranslate nohighlight">\( dan \)</span><span class="math notranslate nohighlight">\( z \)</span>$ ke baris pertama:</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#d-solusi-akhir">d. Solusi Akhir:</a></li>
