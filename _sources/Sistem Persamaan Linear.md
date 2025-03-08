@@ -195,7 +195,12 @@ y = -x + 4 \\
 \end{aligned}
 $$
 
-<iframe src="https://www.geogebra.org/graphing/mprzavhw" width="800" height="600" style="border:0;"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.geogebra.org/graphing/mprzavhw" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 ##### 2. Memiliki Banyak Titik Potong
 $$
@@ -205,7 +210,12 @@ y = 3x - 2 \\
 \end{aligned}
 $$
 
-<iframe src="https://www.geogebra.org/graphing/ydme3cuu" width="800" height="600" style="border:0;"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.geogebra.org/graphing/ydme3cuu" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 ##### 3. Tidak Memiliki  Titik Potong
 $$
@@ -215,7 +225,12 @@ y = 2x - 1 \\
 \end{aligned}
 $$
 
-<iframe src="https://www.geogebra.org/graphing/yrexaspt" width="800" height="600" style="border:0;"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.geogebra.org/graphing/yrexaspt" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 #### b. Sistem Persamaan Tiga Variabel
 ##### 1. Memiliki 1 Titik Potong
@@ -227,7 +242,12 @@ x + y + z &= 6 \\
 \end{aligned}
 $$
 
-<iframe src="https://www.geogebra.org/3d/hed8kshm" width="800" height="600" style="border:0;"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.geogebra.org/3d/hed8kshm" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 ##### 2. Memiliki Banyak Titik Potong
 $$
@@ -238,7 +258,12 @@ x + y + z &= 6 \\
 \end{aligned}
 $$
 
-<iframe src="https://www.geogebra.org/3d/qpqra5sr" width="800" height="600" style="border:0;"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.geogebra.org/3d/qpqra5sr" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          allowfullscreen>
+  </iframe>
+</div>
 
 ##### 3. Tidak Memiliki Titik Potong
 $$
@@ -249,7 +274,13 @@ x + y + z &= 10
 \end{aligned}
 $$
 
-<iframe src="https://www.geogebra.org/3d/repkbdzz" width="800" height="600" style="border:0;"></iframe>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.geogebra.org/3d/repkbdzz" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
+          allowfullscreen>
+  </iframe>
+</div>
+
 
 ## D. Referensi
 - https://linearalgebra.math.umanitoba.ca/math1220/section-11.html
