@@ -239,7 +239,7 @@ $$\begin{bmatrix}
 2 & 1 & 5 & | 0 & 0 & 1
 \end{bmatrix}$$
 
-- $$ R_3 \to R_3 - 3R_1 $$
+- $$ R_3 \to R_3 - \frac{1}{2}R_1 $$
 
 $$\begin{bmatrix} 
 1 & \frac{1}{2} & \frac{1}{4} & | \frac{1}{4} & 0 & 0\\
