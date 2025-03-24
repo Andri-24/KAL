@@ -208,7 +208,7 @@ $$\begin{bmatrix}
 Hasil
 
 $$\begin{bmatrix} 
-1 & \frac{1}{2} & \frac{1}{4} & | \frac{1}{4} & 0 & 0\\
+1 & \frac{1}{2} & \frac{1}{4} & | \frac{1}{4} & \frac{0}{4} & \frac{0}{4}\\
 5 & 1 & 3 & | 0 & 1 & 0\\
 2 & 1 & 5 & | 0 & 0 & 1
 \end{bmatrix}$$
@@ -276,7 +276,7 @@ $$\begin{bmatrix}
 *Langkah 4.4 Ubah baris 1 kolom 2 menjadi 0*
 
 $$\begin{bmatrix} 
-1 & (\frac{1}{2}-\frac{1}{2}.1) & (\frac{1}{4}-\frac{1}{2}.\frac{-7}{6}) & | (\frac{1}{4}-\frac{1}{2}.\frac{5}{6}) & (0-\frac{1}{2}.\frac{-2}{3} & (0-0)\\
+1 & (\frac{1}{2}-\frac{1}{2}.1) & (\frac{1}{4}-\frac{1}{2}.\frac{-7}{6}) & | (\frac{1}{4}-\frac{1}{2}.\frac{5}{6}) & (0-\frac{1}{2}.\frac{-2}{3}) & (0-0)\\
 0 & 1 & \frac{-7}{6} & | \frac{5}{6} & \frac{-2}{3} & 0\\
 0 & 0 & \frac{9}{2} & | \frac{-1}{2} & 0 & 1
 \end{bmatrix}$$
@@ -331,7 +331,7 @@ $$\begin{bmatrix}
 
 $$\begin{bmatrix} 
 1 & 0 & 0 & | \frac{-2}{27} & \frac{1}{3} & \frac{-5}{27}\\
-0 & 1 & (\frac{-7}{6}-\frac{-7}{6}.1) & | (\frac{5}{6}-\frac{-7}{6}.\frac{-1}{9}) & (\frac{-2}{3}.\frac{-7}{6}-0) & (0-\frac{-7}{6}.\frac{2}{9})\\
+0 & 1 & (\frac{-7}{6}-\frac{-7}{6}.1) & | (\frac{5}{6}-\frac{-7}{6}.\frac{-1}{9}) & (\frac{-2}{3}-\frac{-7}{6}.0) & (0-\frac{-7}{6}.\frac{2}{9})\\
 0 & 0 & 1 & | \frac{-1}{9} & 0 & \frac{2}{9}
 \end{bmatrix}$$
 
