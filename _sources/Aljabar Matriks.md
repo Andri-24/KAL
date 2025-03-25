@@ -353,10 +353,11 @@ $$\begin{bmatrix}
 
 **5. Setelah itu Gunakan Rumus $Ax=B$**
 
-$Ax=B$
-$A^{-1}Ax=A^{-1}B$
-$Ix=A^{-1}B$
-$x=A^{-1}B$
+$$\begin{aligned}
+Ax=B\\
+A^{-1}Ax=A^{-1}B\\
+Ix=A^{-1}B\\
+x=A^{-1}B\end{aligned}$$
 
 $$\begin{bmatrix} 
 x\\
