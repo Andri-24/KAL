@@ -200,7 +200,7 @@ $$\begin{bmatrix}
 $$\frac{R_1}{4}$$
 
 $$\begin{bmatrix} 
-\frac{4}{4} & \frac{2}{4} & \frac{1}{4} & | \frac{1}{4} & 0 & 0\\
+\frac{4}{4} & \frac{2}{4} & \frac{1}{4} & | \frac{1}{4} & \frac{0}{4} & \frac{0}{4}\\
 5 & 1 & 3 & | 0 & 1 & 0\\
 2 & 1 & 5 & | 0 & 0 & 1
 \end{bmatrix}$$
@@ -208,7 +208,7 @@ $$\begin{bmatrix}
 Hasil
 
 $$\begin{bmatrix} 
-1 & \frac{1}{2} & \frac{1}{4} & | \frac{1}{4} & \frac{0}{4} & \frac{0}{4}\\
+1 & \frac{1}{2} & \frac{1}{4} & | \frac{1}{4} & 0 & 0\\
 5 & 1 & 3 & | 0 & 1 & 0\\
 2 & 1 & 5 & | 0 & 0 & 1
 \end{bmatrix}$$
