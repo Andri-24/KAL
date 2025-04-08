@@ -5,7 +5,7 @@ title: Transformasi Matriks
 
 # Transformasi Matriks
 
-## Pengertian
+## A. Pengertian
 
 Definisi aljabar dari perkalian matriks tampak aneh pada awalnya, kita akan melihat bahwa definisi tersebut memungkinkan kita menggunakan matriks untuk mendefinisikan fungsi yang mengubah satu vektor menjadi vektor lain, seperti halnya fungsi-fungsi yang kamu kenal dari kalkulus. Kita kemudian akan memvisualisasikan matriks dan perkalian matriks dalam hal efeknya pada vektor.
 
@@ -19,9 +19,7 @@ Fungsi semacam ini disebut **transformasi matriks**; ini adalah contoh dari kela
 
 Representasi grafis dari vektor memungkinkan kita untuk memvisualisasikan transformasi matriks (setidaknya dalam dimensi rendah). Visualisasi ini memainkan peran penting dalam aplikasi seperti grafik komputer. Kita juga akan melihat bahwa keinginan untuk mendefinisikan fungsi menggunakan perkalian matriks memberikan pembenaran atas mengapa perkalian matriks didefinisikan seperti itu.
 
----
-
-### A. Perkalian Matriks – Vektor
+## B. Perkalian Matriks – Vektor
 
 Untuk menyederhanakan diskusi, dan untuk memudahkan kita melihat apa yang sedang terjadi, kita akan membatasi diri (untuk sekarang) ke vektor di $\mathbb{R}^2$. Kita ingin memvisualisasikan hasil dari mengalikan sebuah vektor oleh matriks. Untuk mengalikan vektor 2D dengan matriks $2 \times 2$, kedua objek harus memiliki ukuran yang kompatibel: vektor 2D dapat dikalikan dengan matriks $2 \times 2$. 
 Dengan beberapa vektor dan beberapa matriks, kita akan memplot vektor-vektor tersebut sebelum dan sesudah dikalikan. Dan seperti yang akan kita pelajari...
@@ -87,7 +85,7 @@ Hasilnya digambarkan dalam **Gambar 5.1.6**.
 
 ---
 
-### B. Transformasi pada Bidang Kartesius
+## C. Transformasi pada Bidang Kartesius
 
 Karena sifat Distributif, seperti yang diilustrasikan dalam Contoh 5.1.3, kita tahu bahwa bidang Kartesius akan ditransformasi secara sistematis: garis lurus akan tetap menjadi garis lurus (tidak akan menjadi lengkung, bergelombang, atau putus-putus).  
 **Contoh 5.1.7 Memvisualisasikan transformasi matriks menggunakan vektor**
@@ -174,7 +172,7 @@ Visualisasi di **Gambar 5.1.18**.
 
 ---
 
-### C. Transformasi Matriks 2D
+## D. Transformasi Matriks 2D
 
 Stretch horizontal sebesar faktor $k$:
 
@@ -329,7 +327,7 @@ Catatan:
 - Transformasi bisa mengubah bentuk (meregang, memutar, mencerminkan)
 - Tujuan: memahami mengapa dan bagaimana garis lurus tetap lurus setelah transformasi, dan bagaimana matriks berhubungan dengan operasi ini.
 
-## D. Tugas
+## E. Tugas
 
 ### **Soal 1**
 Diketahui:
@@ -403,6 +401,7 @@ $$
 Gambar menunjukkan transformasi dari bujur sangkar satuan menjadi jajar genjang.
 
 Transformasi bujur sangkar satuan dengan vektor basis:
+
 -
 $$
 \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}

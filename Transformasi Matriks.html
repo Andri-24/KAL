@@ -365,20 +365,17 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-perkalian-matriks-vektor">A. Perkalian Matriks – Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-transformasi-pada-bidang-kartesius">B. Transformasi pada Bidang Kartesius</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-matriks-2d">C. Transformasi Matriks 2D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengertian">A. Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-perkalian-matriks-vektor">B. Perkalian Matriks – Vektor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks">Contoh 1: Menentukan dan menganalisis transformasi matriks</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-tugas">D. Tugas</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>Soal 1</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>Soal 2</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>Soal 5</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-bujur-sangkar-satuan-dengan-vektor-basis">Transformasi bujur sangkar satuan dengan vektor basis:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>Soal 6</strong></a></li>
 </ul>
 </li>
@@ -395,8 +392,8 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transformasi-matriks">
 <h1>Transformasi Matriks<a class="headerlink" href="#transformasi-matriks" title="Link to this heading">#</a></h1>
-<section id="pengertian">
-<h2>Pengertian<a class="headerlink" href="#pengertian" title="Link to this heading">#</a></h2>
+<section id="a-pengertian">
+<h2>A. Pengertian<a class="headerlink" href="#a-pengertian" title="Link to this heading">#</a></h2>
 <p>Definisi aljabar dari perkalian matriks tampak aneh pada awalnya, kita akan melihat bahwa definisi tersebut memungkinkan kita menggunakan matriks untuk mendefinisikan fungsi yang mengubah satu vektor menjadi vektor lain, seperti halnya fungsi-fungsi yang kamu kenal dari kalkulus. Kita kemudian akan memvisualisasikan matriks dan perkalian matriks dalam hal efeknya pada vektor.</p>
 <p>Diberikan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m \times n\)</span>, kita dapat mendefinisikan suatu fungsi <span class="math notranslate nohighlight">\(T\)</span> yang menerima vektor kolom <span class="math notranslate nohighlight">\(\vec{x} \in \mathbb{R}^n\)</span> sebagai input dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y} \in \mathbb{R}^m\)</span> sebagai output, menurut relasi berikut:</p>
 <div class="math notranslate nohighlight">
@@ -405,9 +402,9 @@
 \]</div>
 <p>Fungsi semacam ini disebut <strong>transformasi matriks</strong>; ini adalah contoh dari kelas fungsi yang lebih umum dari ruang vektor ke ruang vektor yang dikenal sebagai <strong>transformasi linier</strong>.</p>
 <p>Representasi grafis dari vektor memungkinkan kita untuk memvisualisasikan transformasi matriks (setidaknya dalam dimensi rendah). Visualisasi ini memainkan peran penting dalam aplikasi seperti grafik komputer. Kita juga akan melihat bahwa keinginan untuk mendefinisikan fungsi menggunakan perkalian matriks memberikan pembenaran atas mengapa perkalian matriks didefinisikan seperti itu.</p>
-<hr class="docutils" />
-<section id="a-perkalian-matriks-vektor">
-<h3>A. Perkalian Matriks – Vektor<a class="headerlink" href="#a-perkalian-matriks-vektor" title="Link to this heading">#</a></h3>
+</section>
+<section id="b-perkalian-matriks-vektor">
+<h2>B. Perkalian Matriks – Vektor<a class="headerlink" href="#b-perkalian-matriks-vektor" title="Link to this heading">#</a></h2>
 <p>Untuk menyederhanakan diskusi, dan untuk memudahkan kita melihat apa yang sedang terjadi, kita akan membatasi diri (untuk sekarang) ke vektor di <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. Kita ingin memvisualisasikan hasil dari mengalikan sebuah vektor oleh matriks. Untuk mengalikan vektor 2D dengan matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span>, kedua objek harus memiliki ukuran yang kompatibel: vektor 2D dapat dikalikan dengan matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span>.
 Dengan beberapa vektor dan beberapa matriks, kita akan memplot vektor-vektor tersebut sebelum dan sesudah dikalikan. Dan seperti yang akan kita pelajari…</p>
 <hr class="docutils" />
@@ -452,8 +449,8 @@ A\vec{i} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}, \quad A\vec{j} = \begin{bmatri
 <p>Hasilnya digambarkan dalam <strong>Gambar 5.1.6</strong>.</p>
 </section>
 <hr class="docutils" />
-<section id="b-transformasi-pada-bidang-kartesius">
-<h3>B. Transformasi pada Bidang Kartesius<a class="headerlink" href="#b-transformasi-pada-bidang-kartesius" title="Link to this heading">#</a></h3>
+<section id="c-transformasi-pada-bidang-kartesius">
+<h2>C. Transformasi pada Bidang Kartesius<a class="headerlink" href="#c-transformasi-pada-bidang-kartesius" title="Link to this heading">#</a></h2>
 <p>Karena sifat Distributif, seperti yang diilustrasikan dalam Contoh 5.1.3, kita tahu bahwa bidang Kartesius akan ditransformasi secara sistematis: garis lurus akan tetap menjadi garis lurus (tidak akan menjadi lengkung, bergelombang, atau putus-putus).<br />
 <strong>Contoh 5.1.7 Memvisualisasikan transformasi matriks menggunakan vektor</strong></p>
 <p>Plotkan vektor-vektor dari persegi satuan sebelum dan setelah dikalikan dengan</p>
@@ -516,8 +513,8 @@ A = \begin{bmatrix} 0 &amp; \frac{3}{2} \\ -1 &amp; 0 \end{bmatrix}
 <p>Visualisasi di <strong>Gambar 5.1.18</strong>.</p>
 </section>
 <hr class="docutils" />
-<section id="c-transformasi-matriks-2d">
-<h3>C. Transformasi Matriks 2D<a class="headerlink" href="#c-transformasi-matriks-2d" title="Link to this heading">#</a></h3>
+<section id="d-transformasi-matriks-2d">
+<h2>D. Transformasi Matriks 2D<a class="headerlink" href="#d-transformasi-matriks-2d" title="Link to this heading">#</a></h2>
 <p>Stretch horizontal sebesar faktor <span class="math notranslate nohighlight">\(k\)</span>:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -542,7 +539,6 @@ A = \begin{bmatrix} 0 &amp; \frac{3}{2} \\ -1 &amp; 0 \end{bmatrix}
 2\vec{i} + 3\vec{j}
 \end{split}\]</div>
 <p>Persamaan ini menyatakan bahwa untuk tiba di vektor <span class="math notranslate nohighlight">\(\begin{bmatrix} 2 \\ 3 \end{bmatrix}\)</span>, kita perlu pergi 2 satuan ke arah <span class="math notranslate nohighlight">\(\vec{i}\)</span> dan 3 satuan ke arah <span class="math notranslate nohighlight">\(\vec{j}\)</span>. Maka untuk mengetahui ke mana <span class="math notranslate nohighlight">\((2,3)\)</span> dikirimkan, kita hanya perlu melihat ke mana 2 satuan dalam arah baru <span class="math notranslate nohighlight">\(\vec{i}\)</span> dan 3 satuan dalam arah baru <span class="math notranslate nohighlight">\(\vec{j}\)</span> mengarah.</p>
-</section>
 <hr class="docutils" />
 <section id="contoh-1-menentukan-dan-menganalisis-transformasi-matriks">
 <h3>Contoh 1: Menentukan dan menganalisis transformasi matriks<a class="headerlink" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks" title="Link to this heading">#</a></h3>
@@ -672,8 +668,8 @@ A = A_4 A_3 A_2 A_1
 </ul>
 </section>
 </section>
-<section id="d-tugas">
-<h2>D. Tugas<a class="headerlink" href="#d-tugas" title="Link to this heading">#</a></h2>
+<section id="e-tugas">
+<h2>E. Tugas<a class="headerlink" href="#e-tugas" title="Link to this heading">#</a></h2>
 <section id="soal-1">
 <h3><strong>Soal 1</strong><a class="headerlink" href="#soal-1" title="Link to this heading">#</a></h3>
 <p>Diketahui:</p>
@@ -754,10 +750,10 @@ A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix} \begin{bmatrix}
 <section id="soal-5">
 <h3><strong>Soal 5</strong><a class="headerlink" href="#soal-5" title="Link to this heading">#</a></h3>
 <p>Gambar menunjukkan transformasi dari bujur sangkar satuan menjadi jajar genjang.</p>
-</section>
-</section>
-<section id="transformasi-bujur-sangkar-satuan-dengan-vektor-basis">
-<h2>Transformasi bujur sangkar satuan dengan vektor basis:<a class="headerlink" href="#transformasi-bujur-sangkar-satuan-dengan-vektor-basis" title="Link to this heading">#</a></h2>
+<p>Transformasi bujur sangkar satuan dengan vektor basis:</p>
+<ul class="simple">
+<li></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
@@ -784,6 +780,7 @@ A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix} \begin{bmatrix}
 \[\begin{split}
 A = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix}
 \end{split}\]</div>
+</section>
 <hr class="docutils" />
 <section id="soal-6">
 <h3><strong>Soal 6</strong><a class="headerlink" href="#soal-6" title="Link to this heading">#</a></h3>
@@ -878,20 +875,17 @@ A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian">Pengertian</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-perkalian-matriks-vektor">A. Perkalian Matriks – Vektor</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-transformasi-pada-bidang-kartesius">B. Transformasi pada Bidang Kartesius</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-matriks-2d">C. Transformasi Matriks 2D</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengertian">A. Pengertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-perkalian-matriks-vektor">B. Perkalian Matriks – Vektor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks">Contoh 1: Menentukan dan menganalisis transformasi matriks</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-tugas">D. Tugas</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-1"><strong>Soal 1</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-2"><strong>Soal 2</strong></a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-5"><strong>Soal 5</strong></a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#transformasi-bujur-sangkar-satuan-dengan-vektor-basis">Transformasi bujur sangkar satuan dengan vektor basis:</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#soal-6"><strong>Soal 6</strong></a></li>
 </ul>
 </li>
