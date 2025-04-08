@@ -373,6 +373,7 @@ A = \begin{bmatrix} 2 & 0 \\ -1 & 3 \end{bmatrix}
 $$
 
 - Vektor 
+
 $$
 \vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
 $$
