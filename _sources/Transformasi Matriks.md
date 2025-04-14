@@ -5,7 +5,7 @@ title: Transformasi Matriks
 
 # Transformasi Matriks
 
-## A. Pengertian
+## A. Transformasi Matriks
 
 Definisi aljabar dari perkalian matriks tampak aneh pada awalnya, kita akan melihat bahwa definisi tersebut memungkinkan kita menggunakan matriks untuk mendefinisikan fungsi yang mengubah satu vektor menjadi vektor lain, seperti halnya fungsi-fungsi yang kamu kenal dari kalkulus. Kita kemudian akan memvisualisasikan matriks dan perkalian matriks dalam hal efeknya pada vektor.
 
@@ -26,94 +26,180 @@ Dengan beberapa vektor dan beberapa matriks, kita akan memplot vektor-vektor ter
 
 ---
 
-**Contoh 1. Mengalikan vektor dengan matriks**
+### **Contoh 1. Mengalikan vektor dengan matriks**
 
-Misalkan 
+Misalkan $A$ adalah sebuah matriks, dan $\vec{x}, \vec{y}, \vec{z}$ adalah vektor-vektor seperti yang diberikan di bawah ini.
 
-$$A = \begin{bmatrix} 2 & 4 \\ 3 & 1 \end{bmatrix}, \quad \vec{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \vec{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+$$
+A = \begin{bmatrix} 1 & 4 \\ 2 & 3 \end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
+$$
 
-Maka:
+Gambarkan $\vec{x}, \vec{y}$, dan $\vec{z}$, serta $A\vec{x}, A\vec{y}$, dan $A\vec{z}$.
 
-$$A\vec{i} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \quad A\vec{j} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}$$
+**Penyelesaian.** Perhitungan berikut cukup langsung:
 
-Vektor-vektor ini digambarkan dalam **Gambar 5.1.2**.
+$$
+A\vec{x} = \begin{bmatrix} 5 \\ 5 \end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}, \quad
+A\vec{z} = \begin{bmatrix} -1 \\ 3 \end{bmatrix}.
+$$
+
+Vektor-vektor tersebut digambarkan dalam gambar berikut
+
+![Screenshot 2025-04-14 081618](https://hackmd.io/_uploads/rJYbGJq0ke.png)
+
 
 ---
 
 Ada beberapa hal yang perlu diperhatikan. Ketika setiap vektor dikalikan oleh $A$, hasilnya adalah vektor dengan panjang berbeda (dalam contoh ini, selalu lebih panjang), dan dalam dua dari tiga kasus (untuk $\vec{j}$ dan $\vec{z}$), vektor hasilnya menunjuk ke arah yang berbeda.
 
-Ini mengejutkan. Dalam bagian sebelumnya kita belajar bahwa perkalian matriks adalah proses yang sangat sistematis dan dapat diprediksi. Haruskah kita mengharapkan beberapa pola segera terlihat dari perkalian oleh $A$? Jawabannya adalah "tidak selalu".  
+Ini mengejutkan. Dalam bagian sebelumnya kita belajar bahwa perkalian matriks adalah proses yang sangat sistematis dan dapat diprediksi. Haruskah kita mengharapkan beberapa pola segera terlihat dari perkalian oleh $A$? Jawabannya adalah "tidak selalu". 
 Beberapa vektor tidak berubah arah, beberapa berubah arah tapi tetap di jalur yang sama (alias menjadi negatif), dan lainnya menyimpang dari arah aslinya.
 
 ---
 
-**Contoh 2. Menggabungkan penjumlahan dan perkalian matriks**
+### **Contoh 2. Menggabungkan penjumlahan dan perkalian matriks**
 
-Misalkan 
-
-$$\vec{z} = \vec{i} + \vec{j}$$
-
-dan
-
-$$A\vec{z} = A(\vec{i} + \vec{j})$$
-
-Maka:
+Misalkan $A$ adalah sebuah matriks dan $\vec{x} \) serta \( \vec{y}$ adalah vektor-vektor seperti yang diberikan di bawah ini.
 
 $$
-\vec{z} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad A\vec{z} = \begin{bmatrix} 6 \\ 4 \end{bmatrix}
+A = \begin{bmatrix} 1 & 1 \\ 2 & 2 \end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}.
 $$
 
-Kita telah menggambarkan hasilnya dalam **Gambar 5.1.4**.
+Gambarkan $\vec{x} + \vec{y}, A\vec{x}, A\vec{y}$, dan $A(\vec{x} + \vec{y})$.
+
+**Penyelesaian.** Perhitungan berikut cukup langsung:
+
+$$
+\vec{x} + \vec{y} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad
+A\vec{x} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad
+A(\vec{x} + \vec{y}) = \begin{bmatrix} 3 \\ 5 \end{bmatrix}.
+$$
+
+Berikut adalah visualisasi gambarnya:
+
+![Screenshot 2025-04-14 082413](https://hackmd.io/_uploads/BJzxNJ9R1g.png)
 
 ---
 
-**Contoh 3. Menggambarkan efek dari perkalian matriks**
+### **Contoh 3. Menggambarkan efek dari perkalian matriks**
 
-Misalkan:
-
-$$
-A = \begin{bmatrix} -1 & 2 \\ 0 & 1 \end{bmatrix}, \quad \vec{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \vec{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-$$
-
-Maka:
+Misalkan $A, \vec{x}, \vec{y}$, dan $\vec{z}$ diberikan seperti di bawah ini.
 
 $$
-A\vec{i} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}, \quad A\vec{j} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}
+A = \begin{bmatrix} 1 & -1 \\ 1 & -1 \end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}.
 $$
 
-Hasilnya digambarkan dalam **Gambar 5.1.6**.
+Gambarkan $\vec{x}, \vec{y}$, dan $\vec{z}$, serta $A\vec{x}, A\vec{y}, A\vec{z}$.
 
----
+**Penyelesaian.** Perhitungan berikut cukup langsung:
+
+$$
+A\vec{x} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix} -2 \\ -2 \end{bmatrix}, \quad
+A\vec{z} = \begin{bmatrix} 3 \\ 3 \end{bmatrix}.
+$$
+
+Berikut visualisasi gambarnya:
+
+![Screenshot 2025-04-14 082954](https://hackmd.io/_uploads/B1YXSJ9RJg.png)
 
 ## C. Transformasi pada Bidang Kartesius
 
-Karena sifat Distributif, seperti yang diilustrasikan dalam Contoh 5.1.3, kita tahu bahwa bidang Kartesius akan ditransformasi secara sistematis: garis lurus akan tetap menjadi garis lurus (tidak akan menjadi lengkung, bergelombang, atau putus-putus).  
-**Contoh 5.1.7 Memvisualisasikan transformasi matriks menggunakan vektor**
+Karena sifat Distributif, kita tahu bahwa bidang Kartesius akan ditransformasi secara sistematis: garis lurus akan tetap menjadi garis lurus (tidak akan menjadi lengkung, bergelombang, atau putus-putus).
 
-Plotkan vektor-vektor dari persegi satuan sebelum dan setelah dikalikan dengan 
+### **Contoh 1. Memvisualisasikan transformasi matriks menggunakan vektor**
 
-$$
-A = \begin{bmatrix} 2 & 4 \\ 1 & 3 \end{bmatrix}
-$$
-
-Empat sudut dari persegi satuan dapat direpresentasikan sebagai:
+Gambarkan vektor-vektor dari satuan persegi sebelum dan sesudah dikalikan dengan matriks $A$, di mana
 
 $$
-\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+A = \begin{bmatrix} 1 & 4 \\ 2 & 3 \end{bmatrix}.
 $$
 
+**Penyelesaian.** Empat sudut dari persegi satuan dapat direpresentasikan oleh vektor-vektor:
+
+$$
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad
+\begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad
+\begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\begin{bmatrix} 0 \\ 1 \end{bmatrix}.
+$$
+
+Mengalikan masing-masing dengan $A$ menghasilkan vektor-vektor:
+
+$$
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad
+\begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad
+\begin{bmatrix} 5 \\ 5 \end{bmatrix}, \quad
+\begin{bmatrix} 4 \\ 3 \end{bmatrix},
+$$
+
+masing-masing.
+
+(Hint: Salah satu cara cepat menggunakan kalkulator untuk menghitung ini adalah dengan membuat matriks 2 × 4 yang kolom-kolomnya adalah keempat vektor tersebut. Dalam hal ini, buat matriks
+
+$$
+B = \begin{bmatrix} 0 & 1 & 1 & 0 \\ 0 & 0 & 1 & 1 \end{bmatrix}.
+$$
+
+Lalu kalikan $B$ dengan $A$, dan baca hasil transformasi dari kolom-kolom hasilnya:
+
+$$
+AB = \begin{bmatrix} 0 & 1 & 5 & 4 \\ 0 & 2 & 5 & 3 \end{bmatrix}.
+$$
+
+Ini menghemat waktu, terutama jika kamu melakukan prosedur serupa untuk beberapa matriks $A$. Tentu saja, kita bisa menghemat waktu lebih banyak dengan melewatkan kolom pertama; karena itu adalah kolom nol, maka hasil kali dengan $A$ juga akan tetap nol.
+
+Persegi satuan dan transformasinya digambarkan pada Gambar berikut, 
+
+![Screenshot 2025-04-14 084310](https://hackmd.io/_uploads/rybSOy9Akg.png)
+
+
+di mana titik-titik sudut yang berbentuk tertentu saling berkorespondensi antara kedua grafik tersebut.
+Perhatikan bagaimana persegi tersebut berubah menjadi semacam segi empat (sebenarnya merupakan jajar genjang).
+Hal yang menarik adalah bagaimana titik-titik sudut berbentuk segitiga dan persegi tampaknya saling bertukar tempat — seolah-olah
+persegi tersebut, selain mengalami perubahan bentuk, juga dibalik.
+
+Untuk menekankan bahwa "garis lurus tetap menjadi garis lurus setelah ditransformasikan," perhatikan Gambar berikut.
+
+![Screenshot 2025-04-14 084449](https://hackmd.io/_uploads/SJRjdJqRJx.png)
+
+
+Di sini, persegi satuan memiliki beberapa titik tambahan yang digambarkan, yang berkorespondensi dengan titik-titik berwarna pada jajar genjang hasil transformasi.
+Perhatikan juga bagaimana jarak relatif tetap terjaga; titik yang berada di tengah-tengah antara titik hitam dan titik persegi ditransformasikan ke posisi di sepanjang garis, tepat di tengah-tengah antara titik hitam dan titik persegi.
 
 ---
 
 **Contoh 1. Memvisualisasikan transformasi matriks pada suatu daerah**
 
-Misalkan
+Gambarkan persegi satuan yang telah ditransformasikan oleh matriks $A$, di mana
 
 $$
-A = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+A = \begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}.
 $$
 
-Maka hasil transformasi dari persegi satuan digambarkan dalam **Gambar 5.1.11**.
+**Penyelesaian.** Kita akan meletakkan vektor-vektor yang merepresentasikan setiap sudut dari persegi satuan ke dalam sebuah matriks \( B \) seperti sebelumnya, lalu mengalikan \( B \) dari kiri dengan \( A \). Dengan demikian diperoleh:
+
+$$
+AB = 
+\begin{bmatrix} 0 & -1 \\ 1 & 0 \end{bmatrix}
+\begin{bmatrix} 0 & 1 & 0 & 1 \\ 0 & 0 & 1 & 1 \end{bmatrix}=
+\begin{bmatrix} 0 & -1 & -1 & -2 \\ 0 & 0 & 1 & 1 \end{bmatrix}.
+$$
+
+(Di gambar berikut, persegi satuan digambarkan kembali bersama dengan hasil transformasinya oleh $A$.)
+
+![Screenshot 2025-04-14 085003](https://hackmd.io/_uploads/SJH19J5Akl.png)
+
 
 ---
 
@@ -131,7 +217,7 @@ Lihat bagaimana $\vec{i}$ dan $\vec{j}$ ditransformasikan. Matriks yang melakuka
 
 ---
 
-**Contoh 2. Menentukan suatu transformasi matriks**
+### **Contoh 2. Menentukan suatu transformasi matriks**
 
 Temukan matriks $A$ yang mem-flip bidang Kartesius di sumbu x dan meregangkannya secara horizontal dengan faktor 2.
 
@@ -150,7 +236,7 @@ Visualisasi di **Gambar 5.1.13** dan **5.1.14**.
 
 ---
 
-**Contoh 3. Menentukan dan menganalisis transformasi matriks**
+### **Contoh 3. Menentukan dan menganalisis transformasi matriks**
 
 Misalnya transformasi dilakukan dengan:
 - Meregangkan bidang secara horizontal sebesar faktor $\frac{3}{2}$
@@ -283,7 +369,7 @@ $$
   \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}
   $$
 
-**Contoh 2: Menentukan matriks transformasi kompleks**
+### **Contoh 2: Menentukan matriks transformasi kompleks**
 
 Langkah-langkah:
 1. Peregangan vertikal sebesar 0.5: 
@@ -331,6 +417,7 @@ Catatan:
 
 ### **Soal 1**
 Diketahui:
+
 - Matriks 
 
 $$
@@ -341,11 +428,7 @@ $$
 
 $$
 \vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
-$$
-
-dan 
-
-$$
+\quad dan \quad
 \vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
 $$
 
@@ -376,11 +459,7 @@ $$
 
 $$
 \vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
-$$
-
-dan 
-
-$$
+\quad dan \quad
 \vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
 $$
 
@@ -399,29 +478,21 @@ $$
 ---
 
 ### **Soal 5**
-Gambar menunjukkan transformasi dari bujur sangkar satuan menjadi jajar genjang.
+Transformasi dari bujur sangkar satuan menjadi jajar genjang.
 
 Transformasi bujur sangkar satuan dengan vektor basis:
 
 -
 $$
 \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-$$
-
-dipetakan ke 
-
-$$
+\quad dipetakan \quad ke \quad
 \begin{bmatrix} 1 \\ 2 \end{bmatrix}
 $$
 
 - 
 $$
-\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-$$
-
-dipetakan ke 
-
-$$
+\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \quad
+dipetakan \quad ke \quad
 \begin{bmatrix} -1 \\ 3 \end{bmatrix}
 $$
 
@@ -440,22 +511,14 @@ Dari gambar:
 - 
 $$
 \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-$$
-
-dipetakan ke 
-
-$$
+\quad dipetakan \quad ke \quad
 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
 $$
 
 -
 $$
 \vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-$$
-
-dipetakan ke 
-
-$$
+\quad dipetakan \quad ke \quad
 \begin{bmatrix} -1 \\ 1 \end{bmatrix}
 $$
 

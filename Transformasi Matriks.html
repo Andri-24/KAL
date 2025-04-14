@@ -365,11 +365,22 @@
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengertian">A. Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-perkalian-matriks-vektor">B. Perkalian Matriks – Vektor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-transformasi-matriks">A. Transformasi Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-perkalian-matriks-vektor">B. Perkalian Matriks – Vektor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-mengalikan-vektor-dengan-matriks"><strong>Contoh 1. Mengalikan vektor dengan matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menggabungkan-penjumlahan-dan-perkalian-matriks"><strong>Contoh 2. Menggabungkan penjumlahan dan perkalian matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menggambarkan-efek-dari-perkalian-matriks"><strong>Contoh 3. Menggambarkan efek dari perkalian matriks</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-memvisualisasikan-transformasi-matriks-menggunakan-vektor"><strong>Contoh 1. Memvisualisasikan transformasi matriks menggunakan vektor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-suatu-transformasi-matriks"><strong>Contoh 2. Menentukan suatu transformasi matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menentukan-dan-menganalisis-transformasi-matriks"><strong>Contoh 3. Menentukan dan menganalisis transformasi matriks</strong></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks">Contoh 1: Menentukan dan menganalisis transformasi matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-matriks-transformasi-kompleks"><strong>Contoh 2: Menentukan matriks transformasi kompleks</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">
@@ -392,8 +403,8 @@
                   
   <section class="tex2jax_ignore mathjax_ignore" id="transformasi-matriks">
 <h1>Transformasi Matriks<a class="headerlink" href="#transformasi-matriks" title="Link to this heading">#</a></h1>
-<section id="a-pengertian">
-<h2>A. Pengertian<a class="headerlink" href="#a-pengertian" title="Link to this heading">#</a></h2>
+<section id="a-transformasi-matriks">
+<h2>A. Transformasi Matriks<a class="headerlink" href="#a-transformasi-matriks" title="Link to this heading">#</a></h2>
 <p>Definisi aljabar dari perkalian matriks tampak aneh pada awalnya, kita akan melihat bahwa definisi tersebut memungkinkan kita menggunakan matriks untuk mendefinisikan fungsi yang mengubah satu vektor menjadi vektor lain, seperti halnya fungsi-fungsi yang kamu kenal dari kalkulus. Kita kemudian akan memvisualisasikan matriks dan perkalian matriks dalam hal efeknya pada vektor.</p>
 <p>Diberikan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(m \times n\)</span>, kita dapat mendefinisikan suatu fungsi <span class="math notranslate nohighlight">\(T\)</span> yang menerima vektor kolom <span class="math notranslate nohighlight">\(\vec{x} \in \mathbb{R}^n\)</span> sebagai input dan menghasilkan vektor kolom <span class="math notranslate nohighlight">\(\vec{y} \in \mathbb{R}^m\)</span> sebagai output, menurut relasi berikut:</p>
 <div class="math notranslate nohighlight">
@@ -408,69 +419,141 @@
 <p>Untuk menyederhanakan diskusi, dan untuk memudahkan kita melihat apa yang sedang terjadi, kita akan membatasi diri (untuk sekarang) ke vektor di <span class="math notranslate nohighlight">\(\mathbb{R}^2\)</span>. Kita ingin memvisualisasikan hasil dari mengalikan sebuah vektor oleh matriks. Untuk mengalikan vektor 2D dengan matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span>, kedua objek harus memiliki ukuran yang kompatibel: vektor 2D dapat dikalikan dengan matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span>.
 Dengan beberapa vektor dan beberapa matriks, kita akan memplot vektor-vektor tersebut sebelum dan sesudah dikalikan. Dan seperti yang akan kita pelajari…</p>
 <hr class="docutils" />
-<p><strong>Contoh 1. Mengalikan vektor dengan matriks</strong></p>
-<p>Misalkan</p>
+<section id="contoh-1-mengalikan-vektor-dengan-matriks">
+<h3><strong>Contoh 1. Mengalikan vektor dengan matriks</strong><a class="headerlink" href="#contoh-1-mengalikan-vektor-dengan-matriks" title="Link to this heading">#</a></h3>
+<p>Misalkan <span class="math notranslate nohighlight">\(A\)</span> adalah sebuah matriks, dan <span class="math notranslate nohighlight">\(\vec{x}, \vec{y}, \vec{z}\)</span> adalah vektor-vektor seperti yang diberikan di bawah ini.</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A = \begin{bmatrix} 2 &amp; 4 \\ 3 &amp; 1 \end{bmatrix}, \quad \vec{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \vec{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}\end{split}\]</div>
-<p>Maka:</p>
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 3 \end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix} 3 \\ -1 \end{bmatrix}.
+\end{split}\]</div>
+<p>Gambarkan <span class="math notranslate nohighlight">\(\vec{x}, \vec{y}\)</span>, dan <span class="math notranslate nohighlight">\(\vec{z}\)</span>, serta <span class="math notranslate nohighlight">\(A\vec{x}, A\vec{y}\)</span>, dan <span class="math notranslate nohighlight">\(A\vec{z}\)</span>.</p>
+<p><strong>Penyelesaian.</strong> Perhitungan berikut cukup langsung:</p>
 <div class="math notranslate nohighlight">
-\[\begin{split}A\vec{i} = \begin{bmatrix} 2 \\ 3 \end{bmatrix}, \quad A\vec{j} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}\end{split}\]</div>
-<p>Vektor-vektor ini digambarkan dalam <strong>Gambar 5.1.2</strong>.</p>
+\[\begin{split}
+A\vec{x} = \begin{bmatrix} 5 \\ 5 \end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix} 3 \\ 1 \end{bmatrix}, \quad
+A\vec{z} = \begin{bmatrix} -1 \\ 3 \end{bmatrix}.
+\end{split}\]</div>
+<p>Vektor-vektor tersebut digambarkan dalam gambar berikut</p>
+<p><img alt="Screenshot 2025-04-14 081618" src="https://hackmd.io/_uploads/rJYbGJq0ke.png" /></p>
 <hr class="docutils" />
 <p>Ada beberapa hal yang perlu diperhatikan. Ketika setiap vektor dikalikan oleh <span class="math notranslate nohighlight">\(A\)</span>, hasilnya adalah vektor dengan panjang berbeda (dalam contoh ini, selalu lebih panjang), dan dalam dua dari tiga kasus (untuk <span class="math notranslate nohighlight">\(\vec{j}\)</span> dan <span class="math notranslate nohighlight">\(\vec{z}\)</span>), vektor hasilnya menunjuk ke arah yang berbeda.</p>
-<p>Ini mengejutkan. Dalam bagian sebelumnya kita belajar bahwa perkalian matriks adalah proses yang sangat sistematis dan dapat diprediksi. Haruskah kita mengharapkan beberapa pola segera terlihat dari perkalian oleh <span class="math notranslate nohighlight">\(A\)</span>? Jawabannya adalah “tidak selalu”.<br />
+<p>Ini mengejutkan. Dalam bagian sebelumnya kita belajar bahwa perkalian matriks adalah proses yang sangat sistematis dan dapat diprediksi. Haruskah kita mengharapkan beberapa pola segera terlihat dari perkalian oleh <span class="math notranslate nohighlight">\(A\)</span>? Jawabannya adalah “tidak selalu”.
 Beberapa vektor tidak berubah arah, beberapa berubah arah tapi tetap di jalur yang sama (alias menjadi negatif), dan lainnya menyimpang dari arah aslinya.</p>
-<hr class="docutils" />
-<p><strong>Contoh 2. Menggabungkan penjumlahan dan perkalian matriks</strong></p>
-<p>Misalkan</p>
-<div class="math notranslate nohighlight">
-\[\vec{z} = \vec{i} + \vec{j}\]</div>
-<p>dan</p>
-<div class="math notranslate nohighlight">
-\[A\vec{z} = A(\vec{i} + \vec{j})\]</div>
-<p>Maka:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\vec{z} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad A\vec{z} = \begin{bmatrix} 6 \\ 4 \end{bmatrix}
-\end{split}\]</div>
-<p>Kita telah menggambarkan hasilnya dalam <strong>Gambar 5.1.4</strong>.</p>
-<hr class="docutils" />
-<p><strong>Contoh 3. Menggambarkan efek dari perkalian matriks</strong></p>
-<p>Misalkan:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-A = \begin{bmatrix} -1 &amp; 2 \\ 0 &amp; 1 \end{bmatrix}, \quad \vec{i} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \vec{j} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<p>Maka:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-A\vec{i} = \begin{bmatrix} -1 \\ 0 \end{bmatrix}, \quad A\vec{j} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<p>Hasilnya digambarkan dalam <strong>Gambar 5.1.6</strong>.</p>
 </section>
 <hr class="docutils" />
+<section id="contoh-2-menggabungkan-penjumlahan-dan-perkalian-matriks">
+<h3><strong>Contoh 2. Menggabungkan penjumlahan dan perkalian matriks</strong><a class="headerlink" href="#contoh-2-menggabungkan-penjumlahan-dan-perkalian-matriks" title="Link to this heading">#</a></h3>
+<p>Misalkan <span class="math notranslate nohighlight">\(A\)</span> adalah sebuah matriks dan <span class="math notranslate nohighlight">\(\vec{x} \) serta \( \vec{y}\)</span> adalah vektor-vektor seperti yang diberikan di bawah ini.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; 1 \\ 2 &amp; 2 \end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix} 2 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}.
+\end{split}\]</div>
+<p>Gambarkan <span class="math notranslate nohighlight">\(\vec{x} + \vec{y}, A\vec{x}, A\vec{y}\)</span>, dan <span class="math notranslate nohighlight">\(A(\vec{x} + \vec{y})\)</span>.</p>
+<p><strong>Penyelesaian.</strong> Perhitungan berikut cukup langsung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\vec{x} + \vec{y} = \begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad
+A\vec{x} = \begin{bmatrix} 3 \\ 4 \end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad
+A(\vec{x} + \vec{y}) = \begin{bmatrix} 3 \\ 5 \end{bmatrix}.
+\end{split}\]</div>
+<p>Berikut adalah visualisasi gambarnya:</p>
+<p><img alt="Screenshot 2025-04-14 082413" src="https://hackmd.io/_uploads/BJzxNJ9R1g.png" /></p>
+</section>
+<hr class="docutils" />
+<section id="contoh-3-menggambarkan-efek-dari-perkalian-matriks">
+<h3><strong>Contoh 3. Menggambarkan efek dari perkalian matriks</strong><a class="headerlink" href="#contoh-3-menggambarkan-efek-dari-perkalian-matriks" title="Link to this heading">#</a></h3>
+<p>Misalkan <span class="math notranslate nohighlight">\(A, \vec{x}, \vec{y}\)</span>, dan <span class="math notranslate nohighlight">\(\vec{z}\)</span> diberikan seperti di bawah ini.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; -1 \\ 1 &amp; -1 \end{bmatrix}, \quad
+\vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\vec{y} = \begin{bmatrix} -1 \\ 1 \end{bmatrix}, \quad
+\vec{z} = \begin{bmatrix} 4 \\ 1 \end{bmatrix}.
+\end{split}\]</div>
+<p>Gambarkan <span class="math notranslate nohighlight">\(\vec{x}, \vec{y}\)</span>, dan <span class="math notranslate nohighlight">\(\vec{z}\)</span>, serta <span class="math notranslate nohighlight">\(A\vec{x}, A\vec{y}, A\vec{z}\)</span>.</p>
+<p><strong>Penyelesaian.</strong> Perhitungan berikut cukup langsung:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A\vec{x} = \begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad
+A\vec{y} = \begin{bmatrix} -2 \\ -2 \end{bmatrix}, \quad
+A\vec{z} = \begin{bmatrix} 3 \\ 3 \end{bmatrix}.
+\end{split}\]</div>
+<p>Berikut visualisasi gambarnya:</p>
+<p><img alt="Screenshot 2025-04-14 082954" src="https://hackmd.io/_uploads/B1YXSJ9RJg.png" /></p>
+</section>
+</section>
 <section id="c-transformasi-pada-bidang-kartesius">
 <h2>C. Transformasi pada Bidang Kartesius<a class="headerlink" href="#c-transformasi-pada-bidang-kartesius" title="Link to this heading">#</a></h2>
-<p>Karena sifat Distributif, seperti yang diilustrasikan dalam Contoh 5.1.3, kita tahu bahwa bidang Kartesius akan ditransformasi secara sistematis: garis lurus akan tetap menjadi garis lurus (tidak akan menjadi lengkung, bergelombang, atau putus-putus).<br />
-<strong>Contoh 5.1.7 Memvisualisasikan transformasi matriks menggunakan vektor</strong></p>
-<p>Plotkan vektor-vektor dari persegi satuan sebelum dan setelah dikalikan dengan</p>
+<p>Karena sifat Distributif, kita tahu bahwa bidang Kartesius akan ditransformasi secara sistematis: garis lurus akan tetap menjadi garis lurus (tidak akan menjadi lengkung, bergelombang, atau putus-putus).</p>
+<section id="contoh-1-memvisualisasikan-transformasi-matriks-menggunakan-vektor">
+<h3><strong>Contoh 1. Memvisualisasikan transformasi matriks menggunakan vektor</strong><a class="headerlink" href="#contoh-1-memvisualisasikan-transformasi-matriks-menggunakan-vektor" title="Link to this heading">#</a></h3>
+<p>Gambarkan vektor-vektor dari satuan persegi sebelum dan sesudah dikalikan dengan matriks <span class="math notranslate nohighlight">\(A\)</span>, di mana</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \begin{bmatrix} 2 &amp; 4 \\ 1 &amp; 3 \end{bmatrix}
+A = \begin{bmatrix} 1 &amp; 4 \\ 2 &amp; 3 \end{bmatrix}.
 \end{split}\]</div>
-<p>Empat sudut dari persegi satuan dapat direpresentasikan sebagai:</p>
+<p><strong>Penyelesaian.</strong> Empat sudut dari persegi satuan dapat direpresentasikan oleh vektor-vektor:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \begin{bmatrix} 0 \\ 1 \end{bmatrix}, \quad \begin{bmatrix} 1 \\ 1 \end{bmatrix}
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad
+\begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad
+\begin{bmatrix} 1 \\ 1 \end{bmatrix}, \quad
+\begin{bmatrix} 0 \\ 1 \end{bmatrix}.
 \end{split}\]</div>
+<p>Mengalikan masing-masing dengan <span class="math notranslate nohighlight">\(A\)</span> menghasilkan vektor-vektor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 0 \\ 0 \end{bmatrix}, \quad
+\begin{bmatrix} 1 \\ 2 \end{bmatrix}, \quad
+\begin{bmatrix} 5 \\ 5 \end{bmatrix}, \quad
+\begin{bmatrix} 4 \\ 3 \end{bmatrix},
+\end{split}\]</div>
+<p>masing-masing.</p>
+<p>(Hint: Salah satu cara cepat menggunakan kalkulator untuk menghitung ini adalah dengan membuat matriks 2 × 4 yang kolom-kolomnya adalah keempat vektor tersebut. Dalam hal ini, buat matriks</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+B = \begin{bmatrix} 0 &amp; 1 &amp; 1 &amp; 0 \\ 0 &amp; 0 &amp; 1 &amp; 1 \end{bmatrix}.
+\end{split}\]</div>
+<p>Lalu kalikan <span class="math notranslate nohighlight">\(B\)</span> dengan <span class="math notranslate nohighlight">\(A\)</span>, dan baca hasil transformasi dari kolom-kolom hasilnya:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+AB = \begin{bmatrix} 0 &amp; 1 &amp; 5 &amp; 4 \\ 0 &amp; 2 &amp; 5 &amp; 3 \end{bmatrix}.
+\end{split}\]</div>
+<p>Ini menghemat waktu, terutama jika kamu melakukan prosedur serupa untuk beberapa matriks <span class="math notranslate nohighlight">\(A\)</span>. Tentu saja, kita bisa menghemat waktu lebih banyak dengan melewatkan kolom pertama; karena itu adalah kolom nol, maka hasil kali dengan <span class="math notranslate nohighlight">\(A\)</span> juga akan tetap nol.</p>
+<p>Persegi satuan dan transformasinya digambarkan pada Gambar berikut,</p>
+<p><img alt="Screenshot 2025-04-14 084310" src="https://hackmd.io/_uploads/rybSOy9Akg.png" /></p>
+<p>di mana titik-titik sudut yang berbentuk tertentu saling berkorespondensi antara kedua grafik tersebut.
+Perhatikan bagaimana persegi tersebut berubah menjadi semacam segi empat (sebenarnya merupakan jajar genjang).
+Hal yang menarik adalah bagaimana titik-titik sudut berbentuk segitiga dan persegi tampaknya saling bertukar tempat — seolah-olah
+persegi tersebut, selain mengalami perubahan bentuk, juga dibalik.</p>
+<p>Untuk menekankan bahwa “garis lurus tetap menjadi garis lurus setelah ditransformasikan,” perhatikan Gambar berikut.</p>
+<p><img alt="Screenshot 2025-04-14 084449" src="https://hackmd.io/_uploads/SJRjdJqRJx.png" /></p>
+<p>Di sini, persegi satuan memiliki beberapa titik tambahan yang digambarkan, yang berkorespondensi dengan titik-titik berwarna pada jajar genjang hasil transformasi.
+Perhatikan juga bagaimana jarak relatif tetap terjaga; titik yang berada di tengah-tengah antara titik hitam dan titik persegi ditransformasikan ke posisi di sepanjang garis, tepat di tengah-tengah antara titik hitam dan titik persegi.</p>
 <hr class="docutils" />
 <p><strong>Contoh 1. Memvisualisasikan transformasi matriks pada suatu daerah</strong></p>
-<p>Misalkan</p>
+<p>Gambarkan persegi satuan yang telah ditransformasikan oleh matriks <span class="math notranslate nohighlight">\(A\)</span>, di mana</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}
+A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}.
 \end{split}\]</div>
-<p>Maka hasil transformasi dari persegi satuan digambarkan dalam <strong>Gambar 5.1.11</strong>.</p>
+<p><strong>Penyelesaian.</strong> Kita akan meletakkan vektor-vektor yang merepresentasikan setiap sudut dari persegi satuan ke dalam sebuah matriks ( B ) seperti sebelumnya, lalu mengalikan ( B ) dari kiri dengan ( A ). Dengan demikian diperoleh:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+AB = 
+\begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}
+\begin{bmatrix} 0 &amp; 1 &amp; 0 &amp; 1 \\ 0 &amp; 0 &amp; 1 &amp; 1 \end{bmatrix}=
+\begin{bmatrix} 0 &amp; -1 &amp; -1 &amp; -2 \\ 0 &amp; 0 &amp; 1 &amp; 1 \end{bmatrix}.
+\end{split}\]</div>
+<p>(Di gambar berikut, persegi satuan digambarkan kembali bersama dengan hasil transformasinya oleh <span class="math notranslate nohighlight">\(A\)</span>.)</p>
+<p><img alt="Screenshot 2025-04-14 085003" src="https://hackmd.io/_uploads/SJH19J5Akl.png" /></p>
 <hr class="docutils" />
 <p>Kita melihat bahwa persegi satuan tidak hanya “bergeser ke kiri”, melainkan telah <strong>berotasi</strong>. Dalam hal ini, bentuk dari suatu objek tidak berubah: hanya orientasinya yang berubah.</p>
 <hr class="docutils" />
@@ -481,8 +564,10 @@ A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 0 \end{bmatrix}
 </ol>
 <p>Jawaban untuk pertanyaan 1:
 Lihat bagaimana <span class="math notranslate nohighlight">\(\vec{i}\)</span> dan <span class="math notranslate nohighlight">\(\vec{j}\)</span> ditransformasikan. Matriks yang melakukan transformasi tersebut akan memiliki hasil-hasil tersebut sebagai kolomnya.</p>
+</section>
 <hr class="docutils" />
-<p><strong>Contoh 2. Menentukan suatu transformasi matriks</strong></p>
+<section id="contoh-2-menentukan-suatu-transformasi-matriks">
+<h3><strong>Contoh 2. Menentukan suatu transformasi matriks</strong><a class="headerlink" href="#contoh-2-menentukan-suatu-transformasi-matriks" title="Link to this heading">#</a></h3>
 <p>Temukan matriks <span class="math notranslate nohighlight">\(A\)</span> yang mem-flip bidang Kartesius di sumbu x dan meregangkannya secara horizontal dengan faktor 2.</p>
 <p>Solusi:
 Flip terhadap sumbu x mengubah <span class="math notranslate nohighlight">\(\vec{e}_2 \rightarrow \begin{bmatrix} 0 \\ -1 \end{bmatrix}\)</span></p>
@@ -493,8 +578,10 @@ Flip terhadap sumbu x mengubah <span class="math notranslate nohighlight">\(\vec
 A = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
 \end{split}\]</div>
 <p>Visualisasi di <strong>Gambar 5.1.13</strong> dan <strong>5.1.14</strong>.</p>
+</section>
 <hr class="docutils" />
-<p><strong>Contoh 3. Menentukan dan menganalisis transformasi matriks</strong></p>
+<section id="contoh-3-menentukan-dan-menganalisis-transformasi-matriks">
+<h3><strong>Contoh 3. Menentukan dan menganalisis transformasi matriks</strong><a class="headerlink" href="#contoh-3-menentukan-dan-menganalisis-transformasi-matriks" title="Link to this heading">#</a></h3>
 <p>Misalnya transformasi dilakukan dengan:</p>
 <ul class="simple">
 <li><p>Meregangkan bidang secara horizontal sebesar faktor <span class="math notranslate nohighlight">\(\frac{3}{2}\)</span></p></li>
@@ -511,6 +598,7 @@ A = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
 A = \begin{bmatrix} 0 &amp; \frac{3}{2} \\ -1 &amp; 0 \end{bmatrix}
 \end{split}\]</div>
 <p>Visualisasi di <strong>Gambar 5.1.18</strong>.</p>
+</section>
 </section>
 <hr class="docutils" />
 <section id="d-transformasi-matriks-2d">
@@ -621,7 +709,9 @@ Matriks:</p>
   \end{split}\]</div>
 </li>
 </ul>
-<p><strong>Contoh 2: Menentukan matriks transformasi kompleks</strong></p>
+</section>
+<section id="contoh-2-menentukan-matriks-transformasi-kompleks">
+<h3><strong>Contoh 2: Menentukan matriks transformasi kompleks</strong><a class="headerlink" href="#contoh-2-menentukan-matriks-transformasi-kompleks" title="Link to this heading">#</a></h3>
 <p>Langkah-langkah:</p>
 <ol class="arabic">
 <li><p>Peregangan vertikal sebesar 0.5:</p>
@@ -686,10 +776,7 @@ A = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 3 \end{bmatrix}
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<p>dan</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\quad dan \quad
 \vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
 \end{split}\]</div>
 <p>Hitung:</p>
@@ -725,10 +812,7 @@ A = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix}
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \vec{x} = \begin{bmatrix} 1 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<p>dan</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\quad dan \quad
 \vec{y} = \begin{bmatrix} -1 \\ 2 \end{bmatrix}
 \end{split}\]</div>
 <p>Hitung:</p>
@@ -750,7 +834,7 @@ A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix} \begin{bmatrix}
 <hr class="docutils" />
 <section id="soal-5">
 <h3><strong>Soal 5</strong><a class="headerlink" href="#soal-5" title="Link to this heading">#</a></h3>
-<p>Gambar menunjukkan transformasi dari bujur sangkar satuan menjadi jajar genjang.</p>
+<p>Transformasi dari bujur sangkar satuan menjadi jajar genjang.</p>
 <p>Transformasi bujur sangkar satuan dengan vektor basis:</p>
 <ul class="simple">
 <li></li>
@@ -758,10 +842,7 @@ A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix} \begin{bmatrix}
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-\end{split}\]</div>
-<p>dipetakan ke</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\quad dipetakan \quad ke \quad
 \begin{bmatrix} 1 \\ 2 \end{bmatrix}
 \end{split}\]</div>
 <ul class="simple">
@@ -769,11 +850,8 @@ A\vec{y} = \begin{bmatrix} 2 &amp; 0 \\ -1 &amp; 3 \end{bmatrix} \begin{bmatrix}
 </ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<p>dipetakan ke</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix} \quad
+dipetakan \quad ke \quad
 \begin{bmatrix} -1 \\ 3 \end{bmatrix}
 \end{split}\]</div>
 <p>Maka matriks transformasi <span class="math notranslate nohighlight">\(A\)</span> adalah:</p>
@@ -793,10 +871,7 @@ Dari gambar:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-\end{split}\]</div>
-<p>dipetakan ke</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\quad dipetakan \quad ke \quad
 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
 \end{split}\]</div>
 <ul class="simple">
@@ -805,10 +880,7 @@ Dari gambar:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-\end{split}\]</div>
-<p>dipetakan ke</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
+\quad dipetakan \quad ke \quad
 \begin{bmatrix} -1 \\ 1 \end{bmatrix}
 \end{split}\]</div>
 <p>Maka matriks transformasi <span class="math notranslate nohighlight">\(A\)</span> adalah:</p>
@@ -876,11 +948,22 @@ A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-pengertian">A. Pengertian</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-perkalian-matriks-vektor">B. Perkalian Matriks – Vektor</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-transformasi-matriks">A. Transformasi Matriks</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#b-perkalian-matriks-vektor">B. Perkalian Matriks – Vektor</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-mengalikan-vektor-dengan-matriks"><strong>Contoh 1. Mengalikan vektor dengan matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menggabungkan-penjumlahan-dan-perkalian-matriks"><strong>Contoh 2. Menggabungkan penjumlahan dan perkalian matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menggambarkan-efek-dari-perkalian-matriks"><strong>Contoh 3. Menggambarkan efek dari perkalian matriks</strong></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-memvisualisasikan-transformasi-matriks-menggunakan-vektor"><strong>Contoh 1. Memvisualisasikan transformasi matriks menggunakan vektor</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-suatu-transformasi-matriks"><strong>Contoh 2. Menentukan suatu transformasi matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menentukan-dan-menganalisis-transformasi-matriks"><strong>Contoh 3. Menentukan dan menganalisis transformasi matriks</strong></a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks">Contoh 1: Menentukan dan menganalisis transformasi matriks</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-matriks-transformasi-kompleks"><strong>Contoh 2: Menentukan matriks transformasi kompleks</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">
