@@ -384,9 +384,9 @@ Jadi, titik $(-1, 2)$ dipetakan ke $\begin{bmatrix} 3 \\ \frac{1}{2} \end{bmatri
 
 ## D. Transformasi Matriks 2D
 
-### Contoh 1: Transformasi Matriks pada Bidang Kartesius
+### ***Contoh 1: Transformasi Matriks pada Bidang Kartesius***
 
-- Peregangan Horizontal dengan faktor 𝑘
+#### 1. Peregangan Horizontal dengan faktor 𝑘
 
 $$
 \begin{bmatrix}
@@ -397,7 +397,7 @@ $$
 
 ![Screenshot 2025-04-15 102755](https://hackmd.io/_uploads/S1W8zUs0kl.png)
 
-- Peregangan Vertikal dengan faktor 𝑘
+#### 2. Peregangan Vertikal dengan faktor 𝑘
 
 $$
 \begin{bmatrix}
@@ -408,7 +408,7 @@ $$
 
 ![Screenshot 2025-04-15 102918](https://hackmd.io/_uploads/BJZoMUjA1g.png)
 
-- Geseran Horizontal dengan faktor 𝑘
+#### 3. Geseran Horizontal dengan faktor 𝑘
 
 $$
 \begin{bmatrix}
@@ -419,7 +419,7 @@ $$
 
 ![image](https://hackmd.io/_uploads/H1qCGUjA1g.png)
 
-- Geseran Vertikal dengan faktor 𝑘
+#### 4. Geseran Vertikal dengan faktor 𝑘
 
 $$
 \begin{bmatrix}
@@ -431,7 +431,7 @@ $$
 ![Screenshot 2025-04-15 103529](https://hackmd.io/_uploads/SJ4FVLoAyx.png)
 
 
-- Refleksi Horizontal terhadap sumbu-y
+#### 5. Refleksi Horizontal terhadap sumbu-y
 
 $$
 \begin{bmatrix}
@@ -443,7 +443,7 @@ $$
 ![Screenshot 2025-04-15 103545](https://hackmd.io/_uploads/rJnj4Li0yg.png)
 
 
-- Refleksi Vertikal terhadap sumbu-x
+#### 6. Refleksi Vertikal terhadap sumbu-x
 
 $$
 \begin{bmatrix}
@@ -455,7 +455,7 @@ $$
 ![Screenshot 2025-04-15 103602](https://hackmd.io/_uploads/rk63VIsCyl.png)
 
 
-- Refleksi Diagonal terhadap garis $y=x$
+#### 7. Refleksi Diagonal terhadap garis $y=x$
 
 $$
 \begin{bmatrix}
@@ -467,7 +467,7 @@ $$
 ![Screenshot 2025-04-15 103614](https://hackmd.io/_uploads/rJh648jCke.png)
 
 
-- Rotasi terhadap titik asal sebesar sudut 𝜃
+#### 8. Rotasi terhadap titik asal sebesar sudut 𝜃
 
 $$
 \begin{bmatrix}
@@ -479,7 +479,7 @@ $$
 ![Screenshot 2025-04-15 103632](https://hackmd.io/_uploads/Bk0RV8iAkl.png)
 
 
-- Proyeksi ke sumbu-x
+#### 9. Proyeksi ke sumbu-x
 
 $$
 \begin{bmatrix}
@@ -491,7 +491,7 @@ $$
 ![Screenshot 2025-04-15 103643](https://hackmd.io/_uploads/ryexHUiCkg.png)
 
 
-- Proyeksi ke sumbu-y
+#### 10. Proyeksi ke sumbu-y
 
 $$
 \begin{bmatrix}
@@ -507,7 +507,7 @@ yang menghasilkan transformasi yang diinginkan. Dalam contoh berikut, kita akan 
 
 ---
 
-### Contoh 2: Menentukan matriks dari suatu transformasi.
+### ***Contoh 2: Menentukan matriks dari suatu transformasi.***
 
 Temukan matriks $A$ yang mentransformasikan bidang Kartesius dengan melakukan operasi berikut secara berurutan:
 
