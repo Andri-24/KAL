@@ -179,7 +179,7 @@ Perhatikan juga bagaimana jarak relatif tetap terjaga; titik yang berada di teng
 
 ---
 
-**Contoh 1. Memvisualisasikan transformasi matriks pada suatu daerah**
+### **Contoh 2. Memvisualisasikan transformasi matriks pada suatu daerah**
 
 Gambarkan persegi satuan yang telah ditransformasikan oleh matriks $A$, di mana
 
@@ -200,9 +200,6 @@ $$
 
 ![Screenshot 2025-04-14 085003](https://hackmd.io/_uploads/SJH19J5Akl.png)
 
-
----
-
 Kita melihat bahwa persegi satuan tidak hanya “bergeser ke kiri”, melainkan telah **berotasi**. Dalam hal ini, bentuk dari suatu objek tidak berubah: hanya orientasinya yang berubah.
 
 ---
@@ -217,201 +214,356 @@ Lihat bagaimana $\vec{i}$ dan $\vec{j}$ ditransformasikan. Matriks yang melakuka
 
 ---
 
-### **Contoh 2. Menentukan suatu transformasi matriks**
+### **Contoh 3. Menentukan suatu transformasi matriks**
 
-Temukan matriks $A$ yang mem-flip bidang Kartesius di sumbu x dan meregangkannya secara horizontal dengan faktor 2.
+Tentukan matriks $A$ yang mencerminkan bidang Kartesius terhadap sumbu $x$, lalu meregangkan bidang secara horizontal dengan faktor dua.
 
-Solusi:
-Flip terhadap sumbu x mengubah $\vec{e}_2 \rightarrow \begin{bmatrix} 0 \\ -1 \end{bmatrix}$
+**Penyelesaian.** Kita mulai dengan mempertimbangkan $\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$ .Ke manakah sudut ini berpindah di bawah transformasi tersebut? Mencerminkan bidang terhadap sumbu $x$ **tidak** mengubah $\vec{e}_1$; meregangkan bidang mengubah $\vec{e}_1$ menjadi: $\vec{e}_1 \rightarrow \begin{bmatrix} 2 \\ 0 \end{bmatrix}$ Maka, kolom pertama dari $A$ adalah: $\begin{bmatrix} 2 \\ 0 \end{bmatrix}.$ Sekarang kita perhatikan $\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$ Mencerminkan bidang terhadap sumbu $x$ mengubahnya menjadi: $\begin{bmatrix} 0 \\ -1 \end{bmatrix},$ dan peregangan horizontal **tidak** memengaruhi vektor ini. Maka, kolom kedua dari $A$ adalah: $\begin{bmatrix} 0 \\ -1 \end{bmatrix}.$
 
-Stretch horizontal faktor 2: $\vec{e}_1 \rightarrow \begin{bmatrix} 2 \\ 0 \end{bmatrix}$
-
-Maka matriksnya:
+Jika digabungkan, kita peroleh:
 
 $$
-A = \begin{bmatrix} 2 & 0 \\ 0 & -1 \end{bmatrix}
+A = \begin{bmatrix} 2 & 0 \\ 0 & -1 \end{bmatrix}.
 $$
 
-Visualisasi di **Gambar 5.1.13** dan **5.1.14**.
+(Untuk membantu memvisualisasikannya, lihat gambar berikut, di mana sebuah bentuk mengalami transformasi dengan matriks ini: dibalik terhadap sumbu $x$ dan diregangkan dua kali ke arah horizontal.)
+
+![Screenshot 2025-04-15 095453](https://hackmd.io/_uploads/Sy3o9HjAkl.png)
+
+Sebelumnya kita telah mengajukan dua pertanyaan. Yang pertama adalah: "Bagaimana kita menemukan matriks yang melakukan transformasi tertentu?" Kita baru saja menjawab pertanyaan itu. Pertanyaan kedua adalah: "Bagaimana pengetahuan tentang bagaimana persegi satuan ditransformasikan membantu kita memahami bagaimana seluruh bidang Kartesius ditransformasikan?"
+
+Pertimbangkan Gambar berikut
+
+![Screenshot 2025-04-15 100223](https://hackmd.io/_uploads/S1nd3BsC1e.png)
+
+
+di mana persegi satuan (dengan titik-titik sudut) telah ditransformasikan oleh matriks yang **tidak diketahui**. Bagaimana gambar ini membantu kita memahami bagaimana titik $(3,1)$ akan ditransformasikan? Sebagai contoh, bagaimana kita bisa menggunakan gambar tersebut untuk mencari tahu ke mana titik $(3,1)$ ditransformasikan?
+
+Ada dua cara untuk menyelesaikan soal ini. Pertama, kita tahu bahwa untuk menghitung matriks transformasi, posisi baru dari $\vec{e}_1$ menjadi kolom pertama dari $A$, dan posisi baru dari $\vec{e}_2$ menjadi kolom kedua dari $A$. Maka dari gambar, kita simpulkan bahwa:
+
+$$
+A = \begin{bmatrix} 1 & -1 \\ 2 & 2 \end{bmatrix}.
+$$
+
+Untuk menemukan ke mana titik $(3,1)$ dipetakan, cukup kalikan:
+
+$$
+\begin{bmatrix} 1 & -1 \\ 2 & 2 \end{bmatrix}
+\begin{bmatrix} 3 \\ 1 \end{bmatrix}=
+\begin{bmatrix} 2 \\ 8 \end{bmatrix}.
+$$
+
+Ada juga cara lain yang lebih intuitif (dan tidak melibatkan perhitungan matriks eksplisit). Pertimbangkan persamaan berikut:
+
+$$
+\begin{bmatrix} 3 \\ 1 \end{bmatrix}
+= 2 \begin{bmatrix} 1 \\ 2 \end{bmatrix} + 1 \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+= 2\vec{e}_1' + \vec{e}_2'.
+$$
+
+Persamaan ini menyatakan hal yang cukup jelas: untuk mencapai vektor $\begin{bmatrix} 3 \\ 1 \end{bmatrix}$ , kita harus bergerak 2 unit ke arah $\vec{e}_1'$ , dan 1 unit ke arah $\vec{e}_2'$.
+
+(Jadi, untuk mengetahui ke mana titik $(2,3)$ dipetakan oleh transformasi, cukup lihat berapa banyak unit $\vec{e}_1'$ dan $\vec{e}_2'$ yang dibutuhkan untuk membentuk kombinasi tersebut. Gambar berikut memberikan visualisasi proses ini.)
+
+![Screenshot 2025-04-15 100359](https://hackmd.io/_uploads/HJZ2hro0yl.png)
 
 ---
 
-### **Contoh 3. Menentukan dan menganalisis transformasi matriks**
+### **Contoh 4. Menentukan dan menganalisis transformasi matriks**
 
-Misalnya transformasi dilakukan dengan:
-- Meregangkan bidang secara horizontal sebesar faktor $\frac{3}{2}$
-- Rotasi 90° searah jarum jam
+Tentukan matriks $A$ yang mentransformasikan bidang Kartesius dengan cara:
+- meregangkannya secara vertikal dengan faktor 1.5,
+- meregangkannya secara horizontal dengan faktor 0.5,
+- kemudian memutarnya searah jarum jam sebesar 90°.
 
-Rotasi 90° searah jarum jam mengubah:
+Selanjutnya, gunakan posisi baru dari $\vec{e}_1$ dan $\vec{e}_2$ untuk menentukan posisi hasil transformasi dari titik $(-1, 2)$.
+
+**Penyelesaian.** Untuk menemukan $A$, kita mulai dengan mencari posisi baru dari $\vec{e}_1$. 
+
+- Peregangan vertikal **tidak** memengaruhi $\vec{e}_1$
+- Peregangan horizontal dengan faktor 0.5 mengubahnya menjadi:
 
 $$
-\vec{e}_1 \rightarrow \begin{bmatrix} 0 \\ -1 \end{bmatrix}, \quad \vec{e}_2 \rightarrow \begin{bmatrix} \frac{3}{2} \\ 0 \end{bmatrix}
+\begin{bmatrix} \frac{1}{2} \\ 0 \end{bmatrix}
 $$
 
-Maka:
+- Memutar 90° searah jarum jam mengubahnya menjadi:
 
 $$
-A = \begin{bmatrix} 0 & \frac{3}{2} \\ -1 & 0 \end{bmatrix}
+\begin{bmatrix} 0 \\ -\frac{1}{2} \end{bmatrix}
 $$
 
-Visualisasi di **Gambar 5.1.18**.
+Ini adalah kolom pertama dari $A$.
 
----
+Sekarang, posisi baru dari $\vec{e}_2$:
+
+- Peregangan vertikal dengan faktor 1.5 mengubahnya menjadi:
+
+$$
+\begin{bmatrix} 0 \\ \frac{3}{2} \end{bmatrix}
+$$
+
+- Peregangan horizontal tidak memengaruhi,
+- Rotasi 90° searah jarum jam mengubahnya menjadi:
+
+$$
+\begin{bmatrix} \frac{3}{2} \\ 0 \end{bmatrix}
+$$
+
+Ini adalah kolom kedua dari $A$. Jadi:
+
+$$
+A = \begin{bmatrix}
+0 & \frac{3}{2} \\
+-\frac{1}{2} & 0
+\end{bmatrix}
+$$
+
+Untuk menentukan ke mana titik $(-1, 2)$ ditransformasikan, kita kalikan:
+
+$$
+\begin{bmatrix}
+0 & \frac{3}{2} \\
+-\frac{1}{2} & 0
+\end{bmatrix}
+\begin{bmatrix}
+-1 \\
+2
+\end{bmatrix}=
+\begin{bmatrix}
+3 \\
+\frac{1}{2}
+\end{bmatrix}
+$$
+
+Jadi, titik $(-1, 2)$ dipetakan ke $\begin{bmatrix} 3 \\ \frac{1}{2} \end{bmatrix}$ . Hasil ini juga dapat diverifikasi secara komputasional seperti yang ditunjukkan pada Gambar berikut.
+
+![Screenshot 2025-04-15 101432](https://hackmd.io/_uploads/rknEJIj0kx.png)
 
 ## D. Transformasi Matriks 2D
 
-Stretch horizontal sebesar faktor $k$:
+- Peregangan Horizontal dengan faktor 𝑘
 
 $$
-\begin{bmatrix} k & 0 \\ 0 & 1 \end{bmatrix}
+\begin{bmatrix}
+k & 0 \\
+0 & 1
+\end{bmatrix}
 $$
 
+![Screenshot 2025-04-15 102755](https://hackmd.io/_uploads/S1W8zUs0kl.png)
 
-Untuk menemukan ke mana titik (2,3) dikirimkan, cukup kalikan
-
-$$
-\begin{bmatrix} 1 & 2 \\ 3 & -1 \end{bmatrix}
-\begin{bmatrix} 2 \\ 3 \end{bmatrix}=
-\begin{bmatrix} 2 + 6 \\ 6 - 3 \end{bmatrix}=
-\begin{bmatrix} 8 \\ 3 \end{bmatrix}
-$$
-
-
-Ada cara lain yang tidak terlalu komputasional — tidak perlu menghitung hasil transformasi secara lengkap. Perhatikan persamaan berikut:
+- Peregangan Vertikal dengan faktor 𝑘
 
 $$
-\begin{bmatrix} 2 \\ 3 \end{bmatrix}=
-2 \begin{bmatrix} 1 \\ 0 \end{bmatrix}+
-3 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-\Rightarrow
-\begin{bmatrix} 2 \\ 3 \end{bmatrix}=
-2\vec{i} + 3\vec{j}
+\begin{bmatrix}
+1 & 0 \\
+0 & k
+\end{bmatrix}
 $$
 
-Persamaan ini menyatakan bahwa untuk tiba di vektor $\begin{bmatrix} 2 \\ 3 \end{bmatrix}$, kita perlu pergi 2 satuan ke arah $\vec{i}$ dan 3 satuan ke arah $\vec{j}$. Maka untuk mengetahui ke mana $(2,3)$ dikirimkan, kita hanya perlu melihat ke mana 2 satuan dalam arah baru $\vec{i}$ dan 3 satuan dalam arah baru $\vec{j}$ mengarah.
+![Screenshot 2025-04-15 102918](https://hackmd.io/_uploads/BJZoMUjA1g.png)
+
+- Geseran Horizontal dengan faktor 𝑘
+
+$$
+\begin{bmatrix}
+1 & k \\
+0 & 1
+\end{bmatrix}
+$$
+
+![image](https://hackmd.io/_uploads/H1qCGUjA1g.png)
+
+- Geseran Vertikal dengan faktor 𝑘
+
+$$
+\begin{bmatrix}
+1 & 0 \\
+k & 1
+\end{bmatrix}
+$$
+
+![Screenshot 2025-04-15 103529](https://hackmd.io/_uploads/SJ4FVLoAyx.png)
+
+
+- Refleksi Horizontal terhadap sumbu-y
+
+$$
+\begin{bmatrix}
+-1 & 0 \\
+0 & 1
+\end{bmatrix}
+$$
+
+![Screenshot 2025-04-15 103545](https://hackmd.io/_uploads/rJnj4Li0yg.png)
+
+
+- Refleksi Vertikal terhadap sumbu-x
+
+$$
+\begin{bmatrix}
+1 & 0 \\
+0 & -1
+\end{bmatrix}
+$$
+
+![Screenshot 2025-04-15 103602](https://hackmd.io/_uploads/rk63VIsCyl.png)
+
+
+- Refleksi Diagonal terhadap garis $y=x$
+
+$$
+\begin{bmatrix}
+0 & 1 \\
+1 & 0
+\end{bmatrix}
+$$
+
+![Screenshot 2025-04-15 103614](https://hackmd.io/_uploads/rJh648jCke.png)
+
+
+- Rotasi terhadap titik asal sebesar sudut 𝜃
+
+$$
+\begin{bmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{bmatrix}
+$$
+
+![Screenshot 2025-04-15 103632](https://hackmd.io/_uploads/Bk0RV8iAkl.png)
+
+
+- Proyeksi ke sumbu-x
+
+$$
+\begin{bmatrix}
+1 & 0 \\
+0 & 0
+\end{bmatrix}
+$$
+
+![Screenshot 2025-04-15 103643](https://hackmd.io/_uploads/ryexHUiCkg.png)
+
+
+- Proyeksi ke sumbu-y
+
+$$
+\begin{bmatrix}
+0 & 0 \\
+0 & 1
+\end{bmatrix}
+$$
+
+![Screenshot 2025-04-15 103655](https://hackmd.io/_uploads/rJmZH8sRyl.png)
+
+Sekarang setelah kita melihat berbagai transformasi yang dapat dilakukan pada bidang Kartesius, mari kita berlatih beberapa kali lagi dalam membuat matriks 
+yang menghasilkan transformasi yang diinginkan. Dalam contoh berikut, kita akan mengembangkan pemahaman kita satu langkah penting lebih jauh.
 
 ---
 
-### Contoh 1: Menentukan dan menganalisis transformasi matriks
+### Contoh 1: Menentukan matriks dari suatu transformasi.
 
-Langkah-langkah:
-1. Temukan matriks $A$ yang mengubah bidang Kartesius dengan:
-   - Peregangan vertikal sebesar 2
-   - Refleksi horizontal
-   - Rotasi 90° searah jarum jam
+Temukan matriks $A$ yang mentransformasikan bidang Kartesius dengan melakukan operasi berikut secara berurutan:
 
-Solusi:
-- Peregangan vertikal: tidak mengubah arah $\vec{i}$, tetapi menggandakan komponen y. Matriksnya:  
-
-  $$
-  \begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}
-  $$
-
-- Refleksi horizontal (terhadap sumbu y):  
-
-  $$
-  \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}
-  $$
-
-- Rotasi 90° searah jarum jam:  
-
-  $$
-  \begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}
-  $$
-
-Gabungan transformasi:
-
-$$
-A = A_3 A_2 A_1 = 
-\begin{bmatrix} 0 & 1 \\ -1 & 0 \end{bmatrix}
-\begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}
-\begin{bmatrix} 1 & 0 \\ 0 & 2 \end{bmatrix}=
-\begin{bmatrix} 0 & 2 \\ 1 & 0 \end{bmatrix}
-$$
+1. Geseran vertikal dengan faktor 0.5  
+2. Rotasi berlawanan arah jarum jam sebesar sudut $30^\circ$  
+3. Peregangan horizontal dengan faktor 2  
+4. Refleksi diagonal terhadap garis $y = -x$
 
 ---
 
-**Contoh transformasi dasar menggunakan matriks:**
+Solusi: Kita sudah tahu bagaimana melakukan ini — semacam. Kita tahu bahwa kita bisa menemukan kolom-kolom dari $A$  dengan menelusuri ke mana $\vec{e}_1$ dan $\vec{e}_2$ berakhir, tetapi ini juga tampak sulit. Ada begitu banyak hal yang terjadi. Untungnya, kita dapat menyelesaikannya dengan cukup mudah dengan menggunakan pendekatan sistematik.
 
-- **Peregangan Vertikal dengan faktor $k$:**  
-  Matriks:  
-  
-  $$
-  \begin{bmatrix} 1 & 0 \\ 0 & k \end{bmatrix}
-  $$
+Pertama, kita lakukan geseran vertikal. Matriks yang melakukan ini adalah:
 
-- **Geseran Horizontal dengan faktor \(k\):**  
-  Matriks: 
-  
-  $$
-  \begin{bmatrix} 1 & k \\ 0 & 1 \end{bmatrix}
-  $$
+$$
+A_1 = \begin{bmatrix} 1 & 0 \\ 0.5 & 1 \end{bmatrix}
+$$
 
-- **Geseran Vertikal dengan faktor \(k\):**  
-  Matriks:  
-  
-  $$
-  \begin{bmatrix} 1 & 0 \\ k & 1 \end{bmatrix}
-  $$
+Setelah itu, kita ingin memutar semuanya searah jarum jam sebesar  $30^\circ$ . Untuk melakukannya, kita gunakan:
 
-- **Refleksi Horizontal (terhadap sumbu y):**  
-  Matriks:
-  
-  $$
-  \begin{bmatrix} -1 & 0 \\ 0 & 1 \end{bmatrix}
-  $$
+$$
+A_2 = \begin{bmatrix} \cos 30^\circ & -\sin 30^\circ \\ \sin 30^\circ & \cos 30^\circ \end{bmatrix} = \begin{bmatrix} \sqrt{3}/2 & -1/2 \\ 1/2 & \sqrt{3}/2 \end{bmatrix}
+$$
 
+Untuk melakukan semua operasi ini secara berurutan, kita kalikan $A_2 A_1.$
 
-- **Proyeksi ke sumbu y (menekan ke arah y):**  
-  Matriks: 
-  
-  $$
-  \begin{bmatrix} 0 & 0 \\ 0 & 1 \end{bmatrix}
-  $$
+Pertimbangkan ini dengan seksama. Misalnya, saya ingin tahu di mana sebuah vektor $\vec{x}$ akan berakhir.
+Kita bisa mendapatkan jawabannya dengan mengalikan $A\vec{x}$. Mengapa ini berhasil? Pertimbangkan:
 
-### **Contoh 2: Menentukan matriks transformasi kompleks**
+$A \vec{x} = A_4 A_3 A_2 A_1 \vec{x}$
 
-Langkah-langkah:
-1. Peregangan vertikal sebesar 0.5: 
+$= A_4 A_3 A_2 (A_1 \vec{x}) \quad \text{(melakukan geseran vertikal)}$
 
-   $$
-   A_1 = \begin{bmatrix} 1 & 0 \\ 0 & 0.5 \end{bmatrix}
-   $$
+$= A_4 A_3 (A_2 (A_1 \vec{x})) \quad \text{(melakukan rotasi)}$
 
-2. Rotasi 30° berlawanan arah jarum jam: 
+$= A_4 (A_3 (A_2 (A_1 \vec{x}))) \quad \text{(melakukan peregangan horizontal)}$
 
-   $$
-   A_2 = \begin{bmatrix} \cos 30° & -\sin 30° \\ \sin 30° & \cos 30° \end{bmatrix}
-   = \begin{bmatrix} \sqrt{3}/2 & -1/2 \\ 1/2 & \sqrt{3}/2 \end{bmatrix}
-   $$
+$= A_4 (\cdots) \quad \text{(melakukan refleksi diagonal)}$
 
-3. Peregangan horizontal sebesar 2:  
+$= \vec{x}_1 \quad \text{(hasil dari mentransformasikan } \vec{x} \text{)}$
 
-   $$
-   A_3 = \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix}
-   $$
+***Catatan*** : Ingat kembali bahwa perkalian matriks tidak komutatif.
 
-4. Refleksi diagonal terhadap garis \(y = x\):  
+$$
+A_1 A_2 \ne A_2 A_1 \quad \Rightarrow \quad A_2 (A_1 \vec{x}) \ne A_1 (A_2 \vec{x})
+$$
 
-   $$
-   A_4 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
-   $$
+Jika ditafsirkan sebagai transformasi bidang, hal ini juga masuk akal secara visual. Misalnya, dalam kebanyakan kasus, refleksi diikuti dengan rotasi tidak akan menghasilkan hasil yang sama seperti rotasi terlebih dahulu lalu refleksi.
+Disarankan untuk bereksperimen dengan beberapa contoh untuk melihat apa yang terjadi jika urutannya dibalik.
+Untuk melakukan dua operasi terakhir, kita ambil:
 
-Gabungan transformasi:
+$$
+A_3 = \begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix} \quad \text{dan} \quad A_4 = \begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
+$$
+
+yang melakukan peregangan horizontal dan refleksi diagonal, secara berurutan. Maka untuk melakukan seluruh operasi sekaligus, kita kalikan:
 
 $$
 A = A_4 A_3 A_2 A_1
 $$
 
-Visualisasi transformasi matriks dari contoh sebelumnya.
+$$= 
+\begin{bmatrix} 0 & 1 \\ 1 & 0 \end{bmatrix}
+\begin{bmatrix} 2 & 0 \\ 0 & 1 \end{bmatrix}
+\begin{bmatrix} \sqrt{3}/2 & -1/2 \\ 1/2 & \sqrt{3}/2 \end{bmatrix}
+\begin{bmatrix} 1 & 0 \\ 0.5 & 1 \end{bmatrix}
+$$
 
-**Gambar 5.1.20 dan 5.1.21:**  
-- Bentuk awal: persegi satuan
-- Bentuk akhir: hasil transformasi melalui beberapa langkah matriks
+$$= 
+\begin{bmatrix}
+((\sqrt{3} - 2)/4) & \sqrt{3}/2 \\
+((2\sqrt{3} - 1)/2) & -1
+\end{bmatrix}
+$$
 
-Catatan:
-- Transformasi bisa mengubah bentuk (meregang, memutar, mencerminkan)
-- Tujuan: memahami mengapa dan bagaimana garis lurus tetap lurus setelah transformasi, dan bagaimana matriks berhubungan dengan operasi ini.
+$$
+\approx
+\begin{bmatrix}
+0.933 & 0.866 \\
+1.232 & -1
+\end{bmatrix}
+$$
+
+Sebagian besar pembaca tidak dapat membayangkan secara tepat apa yang dilakukan oleh daftar operasi yang diberikan terhadap bidang Kartesius. 
+Pada Gambar berikut, kita menggambarkan persegi satuan yang telah ditransformasikan; 
+
+![Screenshot 2025-04-15 110955](https://hackmd.io/_uploads/BJs7hIiRJg.png)
+
+sedangkan pada Gambar berikut, kita menggambarkan sebuah bentuk dan hasil transformasinya.
+
+![Screenshot 2025-04-15 111039](https://hackmd.io/_uploads/Hk7LhIsC1g.png)
+
+Setelah kita mengetahui matriks-matriks yang melakukan transformasi dasar (atau tahu di mana menemukannya), melakukan transformasi kompleks pada bidang Kartesius sebenarnya tidaklah begitu... kompleks. 
+Intinya hanyalah mengalikan dengan serangkaian matriks. 
+
+Kita telah melihat banyak contoh transformasi yang bisa dilakukan, dan kita juga telah menyebutkan beberapa yang tidak bisa — misalnya, kita tidak bisa mengubah sebuah persegi menjadi lingkaran. 
+Mengapa tidak? Mengapa garis lurus selalu berubah menjadi garis lurus? 
+
+Semua pertanyaan ini menuntut kita untuk berpikir seperti seorang matematikawan — kita diminta untuk mempelajari sifat-sifat dari suatu objek yang baru saja kita pelajari dan hubungannya dengan konsep-konsep yang telah kita pelajari sebelumnya. 
+Kita akan melakukan semua ini (dan lebih banyak lagi!) di bagian berikutnya.
 
 ## E. Tugas
 

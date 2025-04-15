@@ -374,13 +374,13 @@
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-memvisualisasikan-transformasi-matriks-menggunakan-vektor"><strong>Contoh 1. Memvisualisasikan transformasi matriks menggunakan vektor</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-suatu-transformasi-matriks"><strong>Contoh 2. Menentukan suatu transformasi matriks</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menentukan-dan-menganalisis-transformasi-matriks"><strong>Contoh 3. Menentukan dan menganalisis transformasi matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-memvisualisasikan-transformasi-matriks-pada-suatu-daerah"><strong>Contoh 2. Memvisualisasikan transformasi matriks pada suatu daerah</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menentukan-suatu-transformasi-matriks"><strong>Contoh 3. Menentukan suatu transformasi matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-4-menentukan-dan-menganalisis-transformasi-matriks"><strong>Contoh 4. Menentukan dan menganalisis transformasi matriks</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks">Contoh 1: Menentukan dan menganalisis transformasi matriks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-matriks-transformasi-kompleks"><strong>Contoh 2: Menentukan matriks transformasi kompleks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-matriks-dari-suatu-transformasi">Contoh 1: Menentukan matriks dari suatu transformasi.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">
@@ -537,8 +537,10 @@ persegi tersebut, selain mengalami perubahan bentuk, juga dibalik.</p>
 <p><img alt="Screenshot 2025-04-14 084449" src="https://hackmd.io/_uploads/SJRjdJqRJx.png" /></p>
 <p>Di sini, persegi satuan memiliki beberapa titik tambahan yang digambarkan, yang berkorespondensi dengan titik-titik berwarna pada jajar genjang hasil transformasi.
 Perhatikan juga bagaimana jarak relatif tetap terjaga; titik yang berada di tengah-tengah antara titik hitam dan titik persegi ditransformasikan ke posisi di sepanjang garis, tepat di tengah-tengah antara titik hitam dan titik persegi.</p>
+</section>
 <hr class="docutils" />
-<p><strong>Contoh 1. Memvisualisasikan transformasi matriks pada suatu daerah</strong></p>
+<section id="contoh-2-memvisualisasikan-transformasi-matriks-pada-suatu-daerah">
+<h3><strong>Contoh 2. Memvisualisasikan transformasi matriks pada suatu daerah</strong><a class="headerlink" href="#contoh-2-memvisualisasikan-transformasi-matriks-pada-suatu-daerah" title="Link to this heading">#</a></h3>
 <p>Gambarkan persegi satuan yang telah ditransformasikan oleh matriks <span class="math notranslate nohighlight">\(A\)</span>, di mana</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -554,7 +556,6 @@ AB =
 \end{split}\]</div>
 <p>(Di gambar berikut, persegi satuan digambarkan kembali bersama dengan hasil transformasinya oleh <span class="math notranslate nohighlight">\(A\)</span>.)</p>
 <p><img alt="Screenshot 2025-04-14 085003" src="https://hackmd.io/_uploads/SJH19J5Akl.png" /></p>
-<hr class="docutils" />
 <p>Kita melihat bahwa persegi satuan tidak hanya “bergeser ke kiri”, melainkan telah <strong>berotasi</strong>. Dalam hal ini, bentuk dari suatu objek tidak berubah: hanya orientasinya yang berubah.</p>
 <hr class="docutils" />
 <p>Kita telah sampai pada bagaimana bidang Kartesius dapat ditransformasi melalui perkalian dengan matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span>. Kita telah melihat beberapa contoh, tapi pertanyaannya adalah:</p>
@@ -566,196 +567,310 @@ AB =
 Lihat bagaimana <span class="math notranslate nohighlight">\(\vec{i}\)</span> dan <span class="math notranslate nohighlight">\(\vec{j}\)</span> ditransformasikan. Matriks yang melakukan transformasi tersebut akan memiliki hasil-hasil tersebut sebagai kolomnya.</p>
 </section>
 <hr class="docutils" />
-<section id="contoh-2-menentukan-suatu-transformasi-matriks">
-<h3><strong>Contoh 2. Menentukan suatu transformasi matriks</strong><a class="headerlink" href="#contoh-2-menentukan-suatu-transformasi-matriks" title="Link to this heading">#</a></h3>
-<p>Temukan matriks <span class="math notranslate nohighlight">\(A\)</span> yang mem-flip bidang Kartesius di sumbu x dan meregangkannya secara horizontal dengan faktor 2.</p>
-<p>Solusi:
-Flip terhadap sumbu x mengubah <span class="math notranslate nohighlight">\(\vec{e}_2 \rightarrow \begin{bmatrix} 0 \\ -1 \end{bmatrix}\)</span></p>
-<p>Stretch horizontal faktor 2: <span class="math notranslate nohighlight">\(\vec{e}_1 \rightarrow \begin{bmatrix} 2 \\ 0 \end{bmatrix}\)</span></p>
-<p>Maka matriksnya:</p>
+<section id="contoh-3-menentukan-suatu-transformasi-matriks">
+<h3><strong>Contoh 3. Menentukan suatu transformasi matriks</strong><a class="headerlink" href="#contoh-3-menentukan-suatu-transformasi-matriks" title="Link to this heading">#</a></h3>
+<p>Tentukan matriks <span class="math notranslate nohighlight">\(A\)</span> yang mencerminkan bidang Kartesius terhadap sumbu <span class="math notranslate nohighlight">\(x\)</span>, lalu meregangkan bidang secara horizontal dengan faktor dua.</p>
+<p><strong>Penyelesaian.</strong> Kita mulai dengan mempertimbangkan <span class="math notranslate nohighlight">\(\vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> .Ke manakah sudut ini berpindah di bawah transformasi tersebut? Mencerminkan bidang terhadap sumbu <span class="math notranslate nohighlight">\(x\)</span> <strong>tidak</strong> mengubah <span class="math notranslate nohighlight">\(\vec{e}_1\)</span>; meregangkan bidang mengubah <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> menjadi: <span class="math notranslate nohighlight">\(\vec{e}_1 \rightarrow \begin{bmatrix} 2 \\ 0 \end{bmatrix}\)</span> Maka, kolom pertama dari <span class="math notranslate nohighlight">\(A\)</span> adalah: <span class="math notranslate nohighlight">\(\begin{bmatrix} 2 \\ 0 \end{bmatrix}.\)</span> Sekarang kita perhatikan <span class="math notranslate nohighlight">\(\vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}\)</span> Mencerminkan bidang terhadap sumbu <span class="math notranslate nohighlight">\(x\)</span> mengubahnya menjadi: <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 \\ -1 \end{bmatrix},\)</span> dan peregangan horizontal <strong>tidak</strong> memengaruhi vektor ini. Maka, kolom kedua dari <span class="math notranslate nohighlight">\(A\)</span> adalah: <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 \\ -1 \end{bmatrix}.\)</span></p>
+<p>Jika digabungkan, kita peroleh:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}
+A = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; -1 \end{bmatrix}.
 \end{split}\]</div>
-<p>Visualisasi di <strong>Gambar 5.1.13</strong> dan <strong>5.1.14</strong>.</p>
+<p>(Untuk membantu memvisualisasikannya, lihat gambar berikut, di mana sebuah bentuk mengalami transformasi dengan matriks ini: dibalik terhadap sumbu <span class="math notranslate nohighlight">\(x\)</span> dan diregangkan dua kali ke arah horizontal.)</p>
+<p><img alt="Screenshot 2025-04-15 095453" src="https://hackmd.io/_uploads/Sy3o9HjAkl.png" /></p>
+<p>Sebelumnya kita telah mengajukan dua pertanyaan. Yang pertama adalah: “Bagaimana kita menemukan matriks yang melakukan transformasi tertentu?” Kita baru saja menjawab pertanyaan itu. Pertanyaan kedua adalah: “Bagaimana pengetahuan tentang bagaimana persegi satuan ditransformasikan membantu kita memahami bagaimana seluruh bidang Kartesius ditransformasikan?”</p>
+<p>Pertimbangkan Gambar berikut</p>
+<p><img alt="Screenshot 2025-04-15 100223" src="https://hackmd.io/_uploads/S1nd3BsC1e.png" /></p>
+<p>di mana persegi satuan (dengan titik-titik sudut) telah ditransformasikan oleh matriks yang <strong>tidak diketahui</strong>. Bagaimana gambar ini membantu kita memahami bagaimana titik <span class="math notranslate nohighlight">\((3,1)\)</span> akan ditransformasikan? Sebagai contoh, bagaimana kita bisa menggunakan gambar tersebut untuk mencari tahu ke mana titik <span class="math notranslate nohighlight">\((3,1)\)</span> ditransformasikan?</p>
+<p>Ada dua cara untuk menyelesaikan soal ini. Pertama, kita tahu bahwa untuk menghitung matriks transformasi, posisi baru dari <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> menjadi kolom pertama dari <span class="math notranslate nohighlight">\(A\)</span>, dan posisi baru dari <span class="math notranslate nohighlight">\(\vec{e}_2\)</span> menjadi kolom kedua dari <span class="math notranslate nohighlight">\(A\)</span>. Maka dari gambar, kita simpulkan bahwa:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 2 \end{bmatrix}.
+\end{split}\]</div>
+<p>Untuk menemukan ke mana titik <span class="math notranslate nohighlight">\((3,1)\)</span> dipetakan, cukup kalikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 1 &amp; -1 \\ 2 &amp; 2 \end{bmatrix}
+\begin{bmatrix} 3 \\ 1 \end{bmatrix}=
+\begin{bmatrix} 2 \\ 8 \end{bmatrix}.
+\end{split}\]</div>
+<p>Ada juga cara lain yang lebih intuitif (dan tidak melibatkan perhitungan matriks eksplisit). Pertimbangkan persamaan berikut:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 3 \\ 1 \end{bmatrix}
+= 2 \begin{bmatrix} 1 \\ 2 \end{bmatrix} + 1 \begin{bmatrix} -1 \\ 2 \end{bmatrix}
+= 2\vec{e}_1' + \vec{e}_2'.
+\end{split}\]</div>
+<p>Persamaan ini menyatakan hal yang cukup jelas: untuk mencapai vektor <span class="math notranslate nohighlight">\(\begin{bmatrix} 3 \\ 1 \end{bmatrix}\)</span> , kita harus bergerak 2 unit ke arah <span class="math notranslate nohighlight">\(\vec{e}_1'\)</span> , dan 1 unit ke arah <span class="math notranslate nohighlight">\(\vec{e}_2'\)</span>.</p>
+<p>(Jadi, untuk mengetahui ke mana titik <span class="math notranslate nohighlight">\((2,3)\)</span> dipetakan oleh transformasi, cukup lihat berapa banyak unit <span class="math notranslate nohighlight">\(\vec{e}_1'\)</span> dan <span class="math notranslate nohighlight">\(\vec{e}_2'\)</span> yang dibutuhkan untuk membentuk kombinasi tersebut. Gambar berikut memberikan visualisasi proses ini.)</p>
+<p><img alt="Screenshot 2025-04-15 100359" src="https://hackmd.io/_uploads/HJZ2hro0yl.png" /></p>
 </section>
 <hr class="docutils" />
-<section id="contoh-3-menentukan-dan-menganalisis-transformasi-matriks">
-<h3><strong>Contoh 3. Menentukan dan menganalisis transformasi matriks</strong><a class="headerlink" href="#contoh-3-menentukan-dan-menganalisis-transformasi-matriks" title="Link to this heading">#</a></h3>
-<p>Misalnya transformasi dilakukan dengan:</p>
+<section id="contoh-4-menentukan-dan-menganalisis-transformasi-matriks">
+<h3><strong>Contoh 4. Menentukan dan menganalisis transformasi matriks</strong><a class="headerlink" href="#contoh-4-menentukan-dan-menganalisis-transformasi-matriks" title="Link to this heading">#</a></h3>
+<p>Tentukan matriks <span class="math notranslate nohighlight">\(A\)</span> yang mentransformasikan bidang Kartesius dengan cara:</p>
 <ul class="simple">
-<li><p>Meregangkan bidang secara horizontal sebesar faktor <span class="math notranslate nohighlight">\(\frac{3}{2}\)</span></p></li>
-<li><p>Rotasi 90° searah jarum jam</p></li>
+<li><p>meregangkannya secara vertikal dengan faktor 1.5,</p></li>
+<li><p>meregangkannya secara horizontal dengan faktor 0.5,</p></li>
+<li><p>kemudian memutarnya searah jarum jam sebesar 90°.</p></li>
 </ul>
-<p>Rotasi 90° searah jarum jam mengubah:</p>
+<p>Selanjutnya, gunakan posisi baru dari <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> dan <span class="math notranslate nohighlight">\(\vec{e}_2\)</span> untuk menentukan posisi hasil transformasi dari titik <span class="math notranslate nohighlight">\((-1, 2)\)</span>.</p>
+<p><strong>Penyelesaian.</strong> Untuk menemukan <span class="math notranslate nohighlight">\(A\)</span>, kita mulai dengan mencari posisi baru dari <span class="math notranslate nohighlight">\(\vec{e}_1\)</span>.</p>
+<ul class="simple">
+<li><p>Peregangan vertikal <strong>tidak</strong> memengaruhi <span class="math notranslate nohighlight">\(\vec{e}_1\)</span></p></li>
+<li><p>Peregangan horizontal dengan faktor 0.5 mengubahnya menjadi:</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-\vec{e}_1 \rightarrow \begin{bmatrix} 0 \\ -1 \end{bmatrix}, \quad \vec{e}_2 \rightarrow \begin{bmatrix} \frac{3}{2} \\ 0 \end{bmatrix}
+\begin{bmatrix} \frac{1}{2} \\ 0 \end{bmatrix}
 \end{split}\]</div>
-<p>Maka:</p>
+<ul class="simple">
+<li><p>Memutar 90° searah jarum jam mengubahnya menjadi:</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-A = \begin{bmatrix} 0 &amp; \frac{3}{2} \\ -1 &amp; 0 \end{bmatrix}
+\begin{bmatrix} 0 \\ -\frac{1}{2} \end{bmatrix}
 \end{split}\]</div>
-<p>Visualisasi di <strong>Gambar 5.1.18</strong>.</p>
+<p>Ini adalah kolom pertama dari <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Sekarang, posisi baru dari <span class="math notranslate nohighlight">\(\vec{e}_2\)</span>:</p>
+<ul class="simple">
+<li><p>Peregangan vertikal dengan faktor 1.5 mengubahnya menjadi:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} 0 \\ \frac{3}{2} \end{bmatrix}
+\end{split}\]</div>
+<ul class="simple">
+<li><p>Peregangan horizontal tidak memengaruhi,</p></li>
+<li><p>Rotasi 90° searah jarum jam mengubahnya menjadi:</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix} \frac{3}{2} \\ 0 \end{bmatrix}
+\end{split}\]</div>
+<p>Ini adalah kolom kedua dari <span class="math notranslate nohighlight">\(A\)</span>. Jadi:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix}
+0 &amp; \frac{3}{2} \\
+-\frac{1}{2} &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p>Untuk menentukan ke mana titik <span class="math notranslate nohighlight">\((-1, 2)\)</span> ditransformasikan, kita kalikan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; \frac{3}{2} \\
+-\frac{1}{2} &amp; 0
+\end{bmatrix}
+\begin{bmatrix}
+-1 \\
+2
+\end{bmatrix}=
+\begin{bmatrix}
+3 \\
+\frac{1}{2}
+\end{bmatrix}
+\end{split}\]</div>
+<p>Jadi, titik <span class="math notranslate nohighlight">\((-1, 2)\)</span> dipetakan ke <span class="math notranslate nohighlight">\(\begin{bmatrix} 3 \\ \frac{1}{2} \end{bmatrix}\)</span> . Hasil ini juga dapat diverifikasi secara komputasional seperti yang ditunjukkan pada Gambar berikut.</p>
+<p><img alt="Screenshot 2025-04-15 101432" src="https://hackmd.io/_uploads/rknEJIj0kx.png" /></p>
 </section>
 </section>
-<hr class="docutils" />
 <section id="d-transformasi-matriks-2d">
 <h2>D. Transformasi Matriks 2D<a class="headerlink" href="#d-transformasi-matriks-2d" title="Link to this heading">#</a></h2>
-<p>Stretch horizontal sebesar faktor <span class="math notranslate nohighlight">\(k\)</span>:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} k &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
-\end{split}\]</div>
-<p>Untuk menemukan ke mana titik (2,3) dikirimkan, cukup kalikan</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 1 &amp; 2 \\ 3 &amp; -1 \end{bmatrix}
-\begin{bmatrix} 2 \\ 3 \end{bmatrix}=
-\begin{bmatrix} 2 + 6 \\ 6 - 3 \end{bmatrix}=
-\begin{bmatrix} 8 \\ 3 \end{bmatrix}
-\end{split}\]</div>
-<p>Ada cara lain yang tidak terlalu komputasional — tidak perlu menghitung hasil transformasi secara lengkap. Perhatikan persamaan berikut:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-\begin{bmatrix} 2 \\ 3 \end{bmatrix}=
-2 \begin{bmatrix} 1 \\ 0 \end{bmatrix}+
-3 \begin{bmatrix} 0 \\ 1 \end{bmatrix}
-\Rightarrow
-\begin{bmatrix} 2 \\ 3 \end{bmatrix}=
-2\vec{i} + 3\vec{j}
-\end{split}\]</div>
-<p>Persamaan ini menyatakan bahwa untuk tiba di vektor <span class="math notranslate nohighlight">\(\begin{bmatrix} 2 \\ 3 \end{bmatrix}\)</span>, kita perlu pergi 2 satuan ke arah <span class="math notranslate nohighlight">\(\vec{i}\)</span> dan 3 satuan ke arah <span class="math notranslate nohighlight">\(\vec{j}\)</span>. Maka untuk mengetahui ke mana <span class="math notranslate nohighlight">\((2,3)\)</span> dikirimkan, kita hanya perlu melihat ke mana 2 satuan dalam arah baru <span class="math notranslate nohighlight">\(\vec{i}\)</span> dan 3 satuan dalam arah baru <span class="math notranslate nohighlight">\(\vec{j}\)</span> mengarah.</p>
-<hr class="docutils" />
-<section id="contoh-1-menentukan-dan-menganalisis-transformasi-matriks">
-<h3>Contoh 1: Menentukan dan menganalisis transformasi matriks<a class="headerlink" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks" title="Link to this heading">#</a></h3>
-<p>Langkah-langkah:</p>
-<ol class="arabic simple">
-<li><p>Temukan matriks <span class="math notranslate nohighlight">\(A\)</span> yang mengubah bidang Kartesius dengan:</p>
 <ul class="simple">
-<li><p>Peregangan vertikal sebesar 2</p></li>
-<li><p>Refleksi horizontal</p></li>
-<li><p>Rotasi 90° searah jarum jam</p></li>
+<li><p>Peregangan Horizontal dengan faktor 𝑘</p></li>
 </ul>
-</li>
-</ol>
-<p>Solusi:</p>
-<ul>
-<li><p>Peregangan vertikal: tidak mengubah arah <span class="math notranslate nohighlight">\(\vec{i}\)</span>, tetapi menggandakan komponen y. Matriksnya:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-  \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 2 \end{bmatrix}
-  \end{split}\]</div>
-</li>
-<li><p>Refleksi horizontal (terhadap sumbu y):</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
-  \end{split}\]</div>
-</li>
-<li><p>Rotasi 90° searah jarum jam:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}
-  \end{split}\]</div>
-</li>
-</ul>
-<p>Gabungan transformasi:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-A = A_3 A_2 A_1 = 
-\begin{bmatrix} 0 &amp; 1 \\ -1 &amp; 0 \end{bmatrix}
-\begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
-\begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 2 \end{bmatrix}=
-\begin{bmatrix} 0 &amp; 2 \\ 1 &amp; 0 \end{bmatrix}
+\begin{bmatrix}
+k &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
 \end{split}\]</div>
-<hr class="docutils" />
-<p><strong>Contoh transformasi dasar menggunakan matriks:</strong></p>
-<ul>
-<li><p><strong>Peregangan Vertikal dengan faktor <span class="math notranslate nohighlight">\(k\)</span>:</strong><br />
-Matriks:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; k \end{bmatrix}
-  \end{split}\]</div>
-</li>
-<li><p><strong>Geseran Horizontal dengan faktor (k):</strong><br />
-Matriks:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{bmatrix} 1 &amp; k \\ 0 &amp; 1 \end{bmatrix}
-  \end{split}\]</div>
-</li>
-<li><p><strong>Geseran Vertikal dengan faktor (k):</strong><br />
-Matriks:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{bmatrix} 1 &amp; 0 \\ k &amp; 1 \end{bmatrix}
-  \end{split}\]</div>
-</li>
-<li><p><strong>Refleksi Horizontal (terhadap sumbu y):</strong><br />
-Matriks:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{bmatrix} -1 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
-  \end{split}\]</div>
-</li>
-<li><p><strong>Proyeksi ke sumbu y (menekan ke arah y):</strong><br />
-Matriks:</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}
-  \begin{bmatrix} 0 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
-  \end{split}\]</div>
-</li>
+<p><img alt="Screenshot 2025-04-15 102755" src="https://hackmd.io/_uploads/S1W8zUs0kl.png" /></p>
+<ul class="simple">
+<li><p>Peregangan Vertikal dengan faktor 𝑘</p></li>
 </ul>
-</section>
-<section id="contoh-2-menentukan-matriks-transformasi-kompleks">
-<h3><strong>Contoh 2: Menentukan matriks transformasi kompleks</strong><a class="headerlink" href="#contoh-2-menentukan-matriks-transformasi-kompleks" title="Link to this heading">#</a></h3>
-<p>Langkah-langkah:</p>
-<ol class="arabic">
-<li><p>Peregangan vertikal sebesar 0.5:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-   A_1 = \begin{bmatrix} 1 &amp; 0 \\ 0 &amp; 0.5 \end{bmatrix}
-   \end{split}\]</div>
-</li>
-<li><p>Rotasi 30° berlawanan arah jarum jam:</p>
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; k
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 102918" src="https://hackmd.io/_uploads/BJZoMUjA1g.png" /></p>
+<ul class="simple">
+<li><p>Geseran Horizontal dengan faktor 𝑘</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-   A_2 = \begin{bmatrix} \cos 30° &amp; -\sin 30° \\ \sin 30° &amp; \cos 30° \end{bmatrix}
-   = \begin{bmatrix} \sqrt{3}/2 &amp; -1/2 \\ 1/2 &amp; \sqrt{3}/2 \end{bmatrix}
-   \end{split}\]</div>
-</li>
-<li><p>Peregangan horizontal sebesar 2:</p>
+\begin{bmatrix}
+1 &amp; k \\
+0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="image" src="https://hackmd.io/_uploads/H1qCGUjA1g.png" /></p>
+<ul class="simple">
+<li><p>Geseran Vertikal dengan faktor 𝑘</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-   A_3 = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
-   \end{split}\]</div>
-</li>
-<li><p>Refleksi diagonal terhadap garis (y = x):</p>
+\begin{bmatrix}
+1 &amp; 0 \\
+k &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 103529" src="https://hackmd.io/_uploads/SJ4FVLoAyx.png" /></p>
+<ul class="simple">
+<li><p>Refleksi Horizontal terhadap sumbu-y</p></li>
+</ul>
 <div class="math notranslate nohighlight">
 \[\begin{split}
-   A_4 = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
-   \end{split}\]</div>
-</li>
+\begin{bmatrix}
+-1 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 103545" src="https://hackmd.io/_uploads/rJnj4Li0yg.png" /></p>
+<ul class="simple">
+<li><p>Refleksi Vertikal terhadap sumbu-x</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; -1
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 103602" src="https://hackmd.io/_uploads/rk63VIsCyl.png" /></p>
+<ul class="simple">
+<li><p>Refleksi Diagonal terhadap garis <span class="math notranslate nohighlight">\(y=x\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 1 \\
+1 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 103614" src="https://hackmd.io/_uploads/rJh648jCke.png" /></p>
+<ul class="simple">
+<li><p>Rotasi terhadap titik asal sebesar sudut 𝜃</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+\cos \theta &amp; -\sin \theta \\
+\sin \theta &amp; \cos \theta
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 103632" src="https://hackmd.io/_uploads/Bk0RV8iAkl.png" /></p>
+<ul class="simple">
+<li><p>Proyeksi ke sumbu-x</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+1 &amp; 0 \\
+0 &amp; 0
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 103643" src="https://hackmd.io/_uploads/ryexHUiCkg.png" /></p>
+<ul class="simple">
+<li><p>Proyeksi ke sumbu-y</p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+0 &amp; 0 \\
+0 &amp; 1
+\end{bmatrix}
+\end{split}\]</div>
+<p><img alt="Screenshot 2025-04-15 103655" src="https://hackmd.io/_uploads/rJmZH8sRyl.png" /></p>
+<p>Sekarang setelah kita melihat berbagai transformasi yang dapat dilakukan pada bidang Kartesius, mari kita berlatih beberapa kali lagi dalam membuat matriks
+yang menghasilkan transformasi yang diinginkan. Dalam contoh berikut, kita akan mengembangkan pemahaman kita satu langkah penting lebih jauh.</p>
+<hr class="docutils" />
+<section id="contoh-1-menentukan-matriks-dari-suatu-transformasi">
+<h3>Contoh 1: Menentukan matriks dari suatu transformasi.<a class="headerlink" href="#contoh-1-menentukan-matriks-dari-suatu-transformasi" title="Link to this heading">#</a></h3>
+<p>Temukan matriks <span class="math notranslate nohighlight">\(A\)</span> yang mentransformasikan bidang Kartesius dengan melakukan operasi berikut secara berurutan:</p>
+<ol class="arabic simple">
+<li><p>Geseran vertikal dengan faktor 0.5</p></li>
+<li><p>Rotasi berlawanan arah jarum jam sebesar sudut <span class="math notranslate nohighlight">\(30^\circ\)</span></p></li>
+<li><p>Peregangan horizontal dengan faktor 2</p></li>
+<li><p>Refleksi diagonal terhadap garis <span class="math notranslate nohighlight">\(y = -x\)</span></p></li>
 </ol>
-<p>Gabungan transformasi:</p>
+<hr class="docutils" />
+<p>Solusi: Kita sudah tahu bagaimana melakukan ini — semacam. Kita tahu bahwa kita bisa menemukan kolom-kolom dari <span class="math notranslate nohighlight">\(A\)</span>  dengan menelusuri ke mana <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> dan <span class="math notranslate nohighlight">\(\vec{e}_2\)</span> berakhir, tetapi ini juga tampak sulit. Ada begitu banyak hal yang terjadi. Untungnya, kita dapat menyelesaikannya dengan cukup mudah dengan menggunakan pendekatan sistematik.</p>
+<p>Pertama, kita lakukan geseran vertikal. Matriks yang melakukan ini adalah:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_1 = \begin{bmatrix} 1 &amp; 0 \\ 0.5 &amp; 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Setelah itu, kita ingin memutar semuanya searah jarum jam sebesar  <span class="math notranslate nohighlight">\(30^\circ\)</span> . Untuk melakukannya, kita gunakan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_2 = \begin{bmatrix} \cos 30^\circ &amp; -\sin 30^\circ \\ \sin 30^\circ &amp; \cos 30^\circ \end{bmatrix} = \begin{bmatrix} \sqrt{3}/2 &amp; -1/2 \\ 1/2 &amp; \sqrt{3}/2 \end{bmatrix}
+\end{split}\]</div>
+<p>Untuk melakukan semua operasi ini secara berurutan, kita kalikan <span class="math notranslate nohighlight">\(A_2 A_1.\)</span></p>
+<p>Pertimbangkan ini dengan seksama. Misalnya, saya ingin tahu di mana sebuah vektor <span class="math notranslate nohighlight">\(\vec{x}\)</span> akan berakhir.
+Kita bisa mendapatkan jawabannya dengan mengalikan <span class="math notranslate nohighlight">\(A\vec{x}\)</span>. Mengapa ini berhasil? Pertimbangkan:</p>
+<p><span class="math notranslate nohighlight">\(A \vec{x} = A_4 A_3 A_2 A_1 \vec{x}\)</span></p>
+<p><span class="math notranslate nohighlight">\(= A_4 A_3 A_2 (A_1 \vec{x}) \quad \text{(melakukan geseran vertikal)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(= A_4 A_3 (A_2 (A_1 \vec{x})) \quad \text{(melakukan rotasi)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(= A_4 (A_3 (A_2 (A_1 \vec{x}))) \quad \text{(melakukan peregangan horizontal)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(= A_4 (\cdots) \quad \text{(melakukan refleksi diagonal)}\)</span></p>
+<p><span class="math notranslate nohighlight">\(= \vec{x}_1 \quad \text{(hasil dari mentransformasikan } \vec{x} \text{)}\)</span></p>
+<p><em><strong>Catatan</strong></em> : Ingat kembali bahwa perkalian matriks tidak komutatif.</p>
+<div class="math notranslate nohighlight">
+\[
+A_1 A_2 \ne A_2 A_1 \quad \Rightarrow \quad A_2 (A_1 \vec{x}) \ne A_1 (A_2 \vec{x})
+\]</div>
+<p>Jika ditafsirkan sebagai transformasi bidang, hal ini juga masuk akal secara visual. Misalnya, dalam kebanyakan kasus, refleksi diikuti dengan rotasi tidak akan menghasilkan hasil yang sama seperti rotasi terlebih dahulu lalu refleksi.
+Disarankan untuk bereksperimen dengan beberapa contoh untuk melihat apa yang terjadi jika urutannya dibalik.
+Untuk melakukan dua operasi terakhir, kita ambil:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A_3 = \begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 1 \end{bmatrix} \quad \text{dan} \quad A_4 = \begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
+\end{split}\]</div>
+<p>yang melakukan peregangan horizontal dan refleksi diagonal, secara berurutan. Maka untuk melakukan seluruh operasi sekaligus, kita kalikan:</p>
 <div class="math notranslate nohighlight">
 \[
 A = A_4 A_3 A_2 A_1
 \]</div>
-<p>Visualisasi transformasi matriks dari contoh sebelumnya.</p>
-<p><strong>Gambar 5.1.20 dan 5.1.21:</strong></p>
-<ul class="simple">
-<li><p>Bentuk awal: persegi satuan</p></li>
-<li><p>Bentuk akhir: hasil transformasi melalui beberapa langkah matriks</p></li>
-</ul>
-<p>Catatan:</p>
-<ul class="simple">
-<li><p>Transformasi bisa mengubah bentuk (meregang, memutar, mencerminkan)</p></li>
-<li><p>Tujuan: memahami mengapa dan bagaimana garis lurus tetap lurus setelah transformasi, dan bagaimana matriks berhubungan dengan operasi ini.</p></li>
-</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}= 
+\begin{bmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{bmatrix}
+\begin{bmatrix} 2 &amp; 0 \\ 0 &amp; 1 \end{bmatrix}
+\begin{bmatrix} \sqrt{3}/2 &amp; -1/2 \\ 1/2 &amp; \sqrt{3}/2 \end{bmatrix}
+\begin{bmatrix} 1 &amp; 0 \\ 0.5 &amp; 1 \end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}= 
+\begin{bmatrix}
+((\sqrt{3} - 2)/4) &amp; \sqrt{3}/2 \\
+((2\sqrt{3} - 1)/2) &amp; -1
+\end{bmatrix}
+\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+\approx
+\begin{bmatrix}
+0.933 &amp; 0.866 \\
+1.232 &amp; -1
+\end{bmatrix}
+\end{split}\]</div>
+<p>Sebagian besar pembaca tidak dapat membayangkan secara tepat apa yang dilakukan oleh daftar operasi yang diberikan terhadap bidang Kartesius.
+Pada Gambar berikut, kita menggambarkan persegi satuan yang telah ditransformasikan;</p>
+<p><img alt="Screenshot 2025-04-15 110955" src="https://hackmd.io/_uploads/BJs7hIiRJg.png" /></p>
+<p>sedangkan pada Gambar berikut, kita menggambarkan sebuah bentuk dan hasil transformasinya.</p>
+<p><img alt="Screenshot 2025-04-15 111039" src="https://hackmd.io/_uploads/Hk7LhIsC1g.png" /></p>
+<p>Setelah kita mengetahui matriks-matriks yang melakukan transformasi dasar (atau tahu di mana menemukannya), melakukan transformasi kompleks pada bidang Kartesius sebenarnya tidaklah begitu… kompleks.
+Intinya hanyalah mengalikan dengan serangkaian matriks.</p>
+<p>Kita telah melihat banyak contoh transformasi yang bisa dilakukan, dan kita juga telah menyebutkan beberapa yang tidak bisa — misalnya, kita tidak bisa mengubah sebuah persegi menjadi lingkaran.
+Mengapa tidak? Mengapa garis lurus selalu berubah menjadi garis lurus?</p>
+<p>Semua pertanyaan ini menuntut kita untuk berpikir seperti seorang matematikawan — kita diminta untuk mempelajari sifat-sifat dari suatu objek yang baru saja kita pelajari dan hubungannya dengan konsep-konsep yang telah kita pelajari sebelumnya.
+Kita akan melakukan semua ini (dan lebih banyak lagi!) di bagian berikutnya.</p>
 </section>
 </section>
 <section id="e-tugas">
@@ -957,13 +1072,13 @@ A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#c-transformasi-pada-bidang-kartesius">C. Transformasi pada Bidang Kartesius</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-memvisualisasikan-transformasi-matriks-menggunakan-vektor"><strong>Contoh 1. Memvisualisasikan transformasi matriks menggunakan vektor</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-suatu-transformasi-matriks"><strong>Contoh 2. Menentukan suatu transformasi matriks</strong></a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menentukan-dan-menganalisis-transformasi-matriks"><strong>Contoh 3. Menentukan dan menganalisis transformasi matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-memvisualisasikan-transformasi-matriks-pada-suatu-daerah"><strong>Contoh 2. Memvisualisasikan transformasi matriks pada suatu daerah</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-3-menentukan-suatu-transformasi-matriks"><strong>Contoh 3. Menentukan suatu transformasi matriks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-4-menentukan-dan-menganalisis-transformasi-matriks"><strong>Contoh 4. Menentukan dan menganalisis transformasi matriks</strong></a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-dan-menganalisis-transformasi-matriks">Contoh 1: Menentukan dan menganalisis transformasi matriks</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-matriks-transformasi-kompleks"><strong>Contoh 2: Menentukan matriks transformasi kompleks</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-matriks-dari-suatu-transformasi">Contoh 1: Menentukan matriks dari suatu transformasi.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">
