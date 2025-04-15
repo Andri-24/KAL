@@ -380,7 +380,8 @@
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-matriks-dari-suatu-transformasi">Contoh 1: Menentukan matriks dari suatu transformasi.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-transformasi-matriks-pada-bidang-kartesius">Contoh 1: Transformasi Matriks pada Bidang Kartesius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-matriks-dari-suatu-transformasi">Contoh 2: Menentukan matriks dari suatu transformasi.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">
@@ -558,13 +559,39 @@ AB =
 <p><img alt="Screenshot 2025-04-14 085003" src="https://hackmd.io/_uploads/SJH19J5Akl.png" /></p>
 <p>Kita melihat bahwa persegi satuan tidak hanya “bergeser ke kiri”, melainkan telah <strong>berotasi</strong>. Dalam hal ini, bentuk dari suatu objek tidak berubah: hanya orientasinya yang berubah.</p>
 <hr class="docutils" />
-<p>Kita telah sampai pada bagaimana bidang Kartesius dapat ditransformasi melalui perkalian dengan matriks <span class="math notranslate nohighlight">\(2 \times 2\)</span>. Kita telah melihat beberapa contoh, tapi pertanyaannya adalah:</p>
+<p>Kita telah membahas bagaimana bidang Kartesius dapat ditransformasikan melalui perkalian dengan matriks <span class="math notranslate nohighlight">\(A\)</span> berukuran <span class="math notranslate nohighlight">\(2 \times 2.\)</span></p>
+<p>Kita telah melihat beberapa contoh sejauh ini, dan intuisi kita tentang bagaimana bidang ini berubah dibentuk oleh pengamatan terhadap perubahan yang terjadi pada satuan persegi. Mari kita eksplorasi lebih jauh dengan dua pertanyaan berikut:</p>
 <ol class="arabic simple">
-<li><p><strong>Bagaimana menemukan matriks yang melakukan transformasi tertentu?</strong></p></li>
-<li><p><strong>Bagaimana memahami perubahan seluruh bidang hanya dengan mengamati transformasi pada persegi satuan?</strong></p></li>
+<li><p>Misalnya kita ingin mentransformasikan bidang Kartesius dengan cara tertentu (seperti memutar bidang berlawanan arah jarum jam sebesar <span class="math notranslate nohighlight">\(180^\circ\)</span>). Bagaimana kita menemukan matriks (jika ada) yang melakukan transformasi tersebut?</p></li>
+<li><p>Bagaimana pengetahuan kita tentang bagaimana satuan persegi berubah bisa membantu kita memahami bagaimana seluruh bidang ditransformasikan?</p></li>
 </ol>
-<p>Jawaban untuk pertanyaan 1:
-Lihat bagaimana <span class="math notranslate nohighlight">\(\vec{i}\)</span> dan <span class="math notranslate nohighlight">\(\vec{j}\)</span> ditransformasikan. Matriks yang melakukan transformasi tersebut akan memiliki hasil-hasil tersebut sebagai kolomnya.</p>
+<p>Kedua pertanyaan ini saling berkaitan, dan saat kita menjawab satu, kita juga akan menjawab yang lainnya.</p>
+<p>Untuk memulai dengan pertanyaan pertama, coba lihat kembali Contoh 1 dan Contoh 2 dan pertimbangkan lagi bagaimana satuan persegi ditransformasikan.</p>
+<p>Apakah ada korelasi antara di mana titik-titik pojok akhirnya berada dengan entri dalam matriks <span class="math notranslate nohighlight">\(A\)</span>?</p>
+<p>Jika kamu baru membaca ini sekarang, dan belum benar-benar melihat contohnya, sebaiknya kamu melihatnya dulu dan coba cari koneksi tersebut.</p>
+<p>Kalau tidak, kamu mungkin menyadari beberapa hal seperti berikut ini:</p>
+<ol class="arabic simple">
+<li><p>Vektor nol (<span class="math notranslate nohighlight">\(\vec{0}\)</span>, atau “pojok hitam”) tidak pernah bergerak. Itu masuk akal, karena: <span class="math notranslate nohighlight">\(A \vec{0} = \vec{0}\)</span></p></li>
+<li><p>Pojok “persegi”, yaitu pojok yang sesuai dengan vektor <span class="math notranslate nohighlight">\(\begin{bmatrix} 1 \\ 0 \end{bmatrix}\)</span> selalu ditransformasikan ke vektor di kolom pertama matriks <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>Demikian juga, pojok “segitiga”, yaitu pojok yang sesuai dengan vektor <span class="math notranslate nohighlight">\(\begin{bmatrix} 0 \\ 1 \end{bmatrix}\)</span> selalu ditransformasikan ke kolom kedua dari <span class="math notranslate nohighlight">\(A\)</span>.</p></li>
+<li><p>Pojok “putih” selalu ditransformasikan ke jumlah dari dua vektor kolom pada <span class="math notranslate nohighlight">\(A\)</span>. (Hal ini sedikit lebih samar dari dua poin sebelumnya, namun dapat dipahami jika kita ingat bahwa pojok ini merupakan “jumlah” dari dua pojok lainnya.)</p></li>
+</ol>
+<p>Sekarang mari kita pahami poin-poin ini. Poin pertama seharusnya jelas: <span class="math notranslate nohighlight">\(\vec{0}\)</span> selalu ditransformasikan ke <span class="math notranslate nohighlight">\(\vec{0}\)</span> melalui perkalian matriks.</p>
+<p>Kita bisa memahami poin ke-2 dan ke-3 secara bersamaan. Misalkan:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix}, \quad \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+\end{split}\]</div>
+<p>Maka:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}
+A \vec{e}_1 = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} a \\ c \end{bmatrix}, \quad A \vec{e}_2 = \begin{bmatrix} a &amp; b \\ c &amp; d \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} b \\ d \end{bmatrix}
+\end{split}\]</div>
+<p>Jadi secara mekanis melalui perkalian matriks, pojok persegi <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> ditransformasikan ke kolom pertama <span class="math notranslate nohighlight">\(A\)</span>, dan pojok segitiga <span class="math notranslate nohighlight">\(\vec{e}_2\)</span> ke kolom kedua <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Dengan argumen serupa, pojok putih (yaitu <span class="math notranslate nohighlight">\(\vec{e}_1 + \vec{e}_2\)</span>) akan ditransformasikan ke jumlah dari kolom-kolom <span class="math notranslate nohighlight">\(A\)</span>.</p>
+<p>Cara lain untuk melihat <span class="math notranslate nohighlight">\(A\)</span> adalah: Apa itu <span class="math notranslate nohighlight">\(A\)</span>? Ia hanyalah matriks yang berisi vektor <span class="math notranslate nohighlight">\(A\)</span> <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> dan <span class="math notranslate nohighlight">\(A\)</span> <span class="math notranslate nohighlight">\(\vec{e}_2\)</span> sebagai kolom-kolomnya.</p>
+<p>Dengan kata lain: Apa isi dari kolom 1 dan kolom 2 dari <span class="math notranslate nohighlight">\(A\)</span>? Jawabannya: <span class="math notranslate nohighlight">\(A\)</span> <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> dan <span class="math notranslate nohighlight">\(A \vec{e}_2\)</span>.</p>
+<p>Maka jika kita diberi tahu posisi akhir dari <span class="math notranslate nohighlight">\(\vec{e}_1\)</span> dan <span class="math notranslate nohighlight">\(\vec{e}_2\)</span> setelah transformasi, kita bisa menyusun matriks <span class="math notranslate nohighlight">\(A\)</span> hanya dengan menaruh hasil tersebut sebagai kolom-kolomnya.</p>
 </section>
 <hr class="docutils" />
 <section id="contoh-3-menentukan-suatu-transformasi-matriks">
@@ -678,6 +705,8 @@ A = \begin{bmatrix}
 </section>
 <section id="d-transformasi-matriks-2d">
 <h2>D. Transformasi Matriks 2D<a class="headerlink" href="#d-transformasi-matriks-2d" title="Link to this heading">#</a></h2>
+<section id="contoh-1-transformasi-matriks-pada-bidang-kartesius">
+<h3>Contoh 1: Transformasi Matriks pada Bidang Kartesius<a class="headerlink" href="#contoh-1-transformasi-matriks-pada-bidang-kartesius" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Peregangan Horizontal dengan faktor 𝑘</p></li>
 </ul>
@@ -790,9 +819,10 @@ k &amp; 1
 <p><img alt="Screenshot 2025-04-15 103655" src="https://hackmd.io/_uploads/rJmZH8sRyl.png" /></p>
 <p>Sekarang setelah kita melihat berbagai transformasi yang dapat dilakukan pada bidang Kartesius, mari kita berlatih beberapa kali lagi dalam membuat matriks
 yang menghasilkan transformasi yang diinginkan. Dalam contoh berikut, kita akan mengembangkan pemahaman kita satu langkah penting lebih jauh.</p>
+</section>
 <hr class="docutils" />
-<section id="contoh-1-menentukan-matriks-dari-suatu-transformasi">
-<h3>Contoh 1: Menentukan matriks dari suatu transformasi.<a class="headerlink" href="#contoh-1-menentukan-matriks-dari-suatu-transformasi" title="Link to this heading">#</a></h3>
+<section id="contoh-2-menentukan-matriks-dari-suatu-transformasi">
+<h3>Contoh 2: Menentukan matriks dari suatu transformasi.<a class="headerlink" href="#contoh-2-menentukan-matriks-dari-suatu-transformasi" title="Link to this heading">#</a></h3>
 <p>Temukan matriks <span class="math notranslate nohighlight">\(A\)</span> yang mentransformasikan bidang Kartesius dengan melakukan operasi berikut secara berurutan:</p>
 <ol class="arabic simple">
 <li><p>Geseran vertikal dengan faktor 0.5</p></li>
@@ -1078,7 +1108,8 @@ A = \begin{bmatrix} 0 &amp; -1 \\ 1 &amp; 1 \end{bmatrix}
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-transformasi-matriks-2d">D. Transformasi Matriks 2D</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-menentukan-matriks-dari-suatu-transformasi">Contoh 1: Menentukan matriks dari suatu transformasi.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-1-transformasi-matriks-pada-bidang-kartesius">Contoh 1: Transformasi Matriks pada Bidang Kartesius</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#contoh-2-menentukan-matriks-dari-suatu-transformasi">Contoh 2: Menentukan matriks dari suatu transformasi.</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#e-tugas">E. Tugas</a><ul class="nav section-nav flex-column">

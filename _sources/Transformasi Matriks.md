@@ -204,13 +204,55 @@ Kita melihat bahwa persegi satuan tidak hanya “bergeser ke kiri”, melainkan 
 
 ---
 
-Kita telah sampai pada bagaimana bidang Kartesius dapat ditransformasi melalui perkalian dengan matriks $2 \times 2$. Kita telah melihat beberapa contoh, tapi pertanyaannya adalah:
+Kita telah membahas bagaimana bidang Kartesius dapat ditransformasikan melalui perkalian dengan matriks $A$ berukuran $2 \times 2.$
 
-1. **Bagaimana menemukan matriks yang melakukan transformasi tertentu?**
-2. **Bagaimana memahami perubahan seluruh bidang hanya dengan mengamati transformasi pada persegi satuan?**
+Kita telah melihat beberapa contoh sejauh ini, dan intuisi kita tentang bagaimana bidang ini berubah dibentuk oleh pengamatan terhadap perubahan yang terjadi pada satuan persegi. Mari kita eksplorasi lebih jauh dengan dua pertanyaan berikut:
 
-Jawaban untuk pertanyaan 1:
-Lihat bagaimana $\vec{i}$ dan $\vec{j}$ ditransformasikan. Matriks yang melakukan transformasi tersebut akan memiliki hasil-hasil tersebut sebagai kolomnya.
+1. Misalnya kita ingin mentransformasikan bidang Kartesius dengan cara tertentu (seperti memutar bidang berlawanan arah jarum jam sebesar $180^\circ$). Bagaimana kita menemukan matriks (jika ada) yang melakukan transformasi tersebut?
+
+2. Bagaimana pengetahuan kita tentang bagaimana satuan persegi berubah bisa membantu kita memahami bagaimana seluruh bidang ditransformasikan?
+
+Kedua pertanyaan ini saling berkaitan, dan saat kita menjawab satu, kita juga akan menjawab yang lainnya.
+
+Untuk memulai dengan pertanyaan pertama, coba lihat kembali Contoh 1 dan Contoh 2 dan pertimbangkan lagi bagaimana satuan persegi ditransformasikan.
+
+Apakah ada korelasi antara di mana titik-titik pojok akhirnya berada dengan entri dalam matriks $A$?
+
+Jika kamu baru membaca ini sekarang, dan belum benar-benar melihat contohnya, sebaiknya kamu melihatnya dulu dan coba cari koneksi tersebut.
+
+Kalau tidak, kamu mungkin menyadari beberapa hal seperti berikut ini:
+
+1. Vektor nol ($\vec{0}$, atau "pojok hitam") tidak pernah bergerak. Itu masuk akal, karena: $A \vec{0} = \vec{0}$
+
+2. Pojok "persegi", yaitu pojok yang sesuai dengan vektor $\begin{bmatrix} 1 \\ 0 \end{bmatrix}$ selalu ditransformasikan ke vektor di kolom pertama matriks $A$.
+
+3. Demikian juga, pojok "segitiga", yaitu pojok yang sesuai dengan vektor $\begin{bmatrix} 0 \\ 1 \end{bmatrix}$ selalu ditransformasikan ke kolom kedua dari $A$.
+
+4. Pojok "putih" selalu ditransformasikan ke jumlah dari dua vektor kolom pada $A$. (Hal ini sedikit lebih samar dari dua poin sebelumnya, namun dapat dipahami jika kita ingat bahwa pojok ini merupakan "jumlah" dari dua pojok lainnya.)
+
+Sekarang mari kita pahami poin-poin ini. Poin pertama seharusnya jelas: $\vec{0}$ selalu ditransformasikan ke $\vec{0}$ melalui perkalian matriks.
+
+Kita bisa memahami poin ke-2 dan ke-3 secara bersamaan. Misalkan:
+
+$$
+A = \begin{bmatrix} a & b \\ c & d \end{bmatrix}, \quad \vec{e}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}, \quad \vec{e}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}
+$$
+
+Maka:
+
+$$
+A \vec{e}_1 = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} 1 \\ 0 \end{bmatrix} = \begin{bmatrix} a \\ c \end{bmatrix}, \quad A \vec{e}_2 = \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} b \\ d \end{bmatrix}
+$$
+
+Jadi secara mekanis melalui perkalian matriks, pojok persegi $\vec{e}_1$ ditransformasikan ke kolom pertama $A$, dan pojok segitiga $\vec{e}_2$ ke kolom kedua $A$.
+
+Dengan argumen serupa, pojok putih (yaitu $\vec{e}_1 + \vec{e}_2$) akan ditransformasikan ke jumlah dari kolom-kolom $A$.
+
+Cara lain untuk melihat $A$ adalah: Apa itu $A$? Ia hanyalah matriks yang berisi vektor $A$ $\vec{e}_1$ dan $A$ $\vec{e}_2$ sebagai kolom-kolomnya.
+
+Dengan kata lain: Apa isi dari kolom 1 dan kolom 2 dari $A$? Jawabannya: $A$ $\vec{e}_1$ dan $A \vec{e}_2$.
+
+Maka jika kita diberi tahu posisi akhir dari $\vec{e}_1$ dan $\vec{e}_2$ setelah transformasi, kita bisa menyusun matriks $A$ hanya dengan menaruh hasil tersebut sebagai kolom-kolomnya.
 
 ---
 
@@ -342,6 +384,8 @@ Jadi, titik $(-1, 2)$ dipetakan ke $\begin{bmatrix} 3 \\ \frac{1}{2} \end{bmatri
 
 ## D. Transformasi Matriks 2D
 
+### Contoh 1: Transformasi Matriks pada Bidang Kartesius
+
 - Peregangan Horizontal dengan faktor 𝑘
 
 $$
@@ -463,7 +507,7 @@ yang menghasilkan transformasi yang diinginkan. Dalam contoh berikut, kita akan 
 
 ---
 
-### Contoh 1: Menentukan matriks dari suatu transformasi.
+### Contoh 2: Menentukan matriks dari suatu transformasi.
 
 Temukan matriks $A$ yang mentransformasikan bidang Kartesius dengan melakukan operasi berikut secara berurutan:
 
