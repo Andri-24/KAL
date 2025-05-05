@@ -1,5 +1,5 @@
 ---
-title: Transformasi Linear 2
+title: Transformasi Linear
 
 ---
 
@@ -110,6 +110,7 @@ maka $T$ **adalah transformasi linear** dari $\mathbb{R}^2$ ke $\mathbb{R}^2$.
 
 ### 1. Refleksi Terhadap Sumbu X
 **Matriks Transformasi:**
+
 $$
 \begin{pmatrix}
 1 & 0 \\
@@ -119,6 +120,7 @@ $$
 
 **Contoh Perhitungan:**
 - Titik $A(2, 3)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -138,6 +140,7 @@ $$
 <iframe src="https://www.geogebra.org/calculator/tmchhnd4" width="800" height="600" style="border:0px;"> </iframe>
 
 - Titik $A(-1, 4)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -160,6 +163,7 @@ $$
 
 ### 2. Refleksi Terhadap Sumbu Y
 **Matriks Transformasi:**
+
 $$
 \begin{pmatrix}
 -1 & 0 \\
@@ -169,6 +173,7 @@ $$
 
 **Contoh Perhitungan:**
 - Titik $B(-1, 4)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -188,6 +193,7 @@ $$
 <iframe src="https://www.geogebra.org/calculator/wgq6psq7" width="800" height="600" style="border:0px;"> </iframe>
 
 - Titik $B(-3, -6)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -210,6 +216,7 @@ $$
 
 ### 3. Refleksi Terhadap Garis $y = x$
 **Matriks Transformasi:**
+
 $$
 \begin{pmatrix}
 0 & 1 \\
@@ -219,6 +226,7 @@ $$
 
 **Contoh Perhitungan:**
 - Titik $C(5, -2)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -238,6 +246,7 @@ $$
 <iframe src="https://www.geogebra.org/calculator/xayzh8yj" width="800" height="600" style="border:0px;"> </iframe>
   
 - Titik $C(1, 4)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -260,6 +269,7 @@ $$
 
 ### 4. Refleksi Terhadap Garis $y = -x$
 **Matriks Transformasi:**
+
 $$
 \begin{pmatrix}
 0 & -1 \\
@@ -269,6 +279,7 @@ $$
 
 **Contoh Perhitungan:**
 - Titik $D(-3, -6)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -288,6 +299,7 @@ $$
 <iframe src="https://www.geogebra.org/calculator/yajftrph" width="800" height="600" style="border:0px;"> </iframe>
   
 - Titik $D(-4, 1)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -310,6 +322,7 @@ $$
 
 ### 5. Refleksi Terhadap Titik Asal $(0,0)$
 **Matriks Transformasi:**
+
 $$
 \begin{pmatrix}
 -1 & 0 \\
@@ -319,6 +332,7 @@ $$
 
 **Contoh Perhitungan:**
 - Titik $E(2, -3)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
@@ -338,6 +352,7 @@ $$
 <iframe src="https://www.geogebra.org/calculator/vwvuu2ze" width="800" height="600" style="border:0px;"> </iframe>
   
 - Titik $E(-5, -7)$:
+
   $$
   \begin{pmatrix}
   x' \\ y'
