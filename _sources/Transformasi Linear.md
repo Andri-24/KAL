@@ -106,7 +106,7 @@ Karena $T$ memenuhi kedua sifat:
 
 maka $T$ **adalah transformasi linear** dari $\mathbb{R}^2$ ke $\mathbb{R}^2$.
 
-## 2. Tugas 
+## 2. Tugas 1(Penerapan Transformasi Matriks di Geogebra)
 
 ### 1. Refleksi Terhadap Sumbu X
 **Matriks Transformasi:**
@@ -370,3 +370,154 @@ $$
   $$
 
 <iframe src="https://www.geogebra.org/calculator/bsnhbfrh" width="800" height="600" style="border:0px;"> </iframe>
+
+## 3. Tugas 2(Program Refleksi x=2, y=2, dan y=x)
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Titik awal
+point = np.array([3, 4])  # Contoh titik awal (bisa diubah)
+print(f"Titik awal: {point}")
+
+# Fungsi untuk merefleksikan titik terhadap garis x = a
+def reflect_over_x_equals_a(point, a):
+    # Matriks refleksi terhadap x = a
+    transform_matrix = np.array([[-1, 0],
+                                [0, 1]])
+    translated_point = point - np.array([a, 0])
+    reflected_point = np.dot(transform_matrix, translated_point)
+    return reflected_point + np.array([a, 0])
+
+# Fungsi untuk merefleksikan titik terhadap garis y = b
+def reflect_over_y_equals_b(point, b):
+    # Matriks refleksi terhadap y = b
+    transform_matrix = np.array([[1, 0],
+                                [0, -1]])
+    translated_point = point - np.array([0, b])
+    reflected_point = np.dot(transform_matrix, translated_point)
+    return reflected_point + np.array([0, b])
+
+# Fungsi untuk merefleksikan titik terhadap garis y = x
+def reflect_over_y_equals_x(point):
+    # Matriks refleksi terhadap y = x
+    transform_matrix = np.array([[0, 1],
+                                [1, 0]])
+    return np.dot(transform_matrix, point)
+
+# Melakukan refleksi
+reflected_x2 = reflect_over_x_equals_a(point, 2)
+reflected_y2 = reflect_over_y_equals_b(point, 2)
+reflected_yx = reflect_over_y_equals_x(point)
+
+print(f"Refleksi terhadap x=2: {reflected_x2}")
+print(f"Refleksi terhadap y=2: {reflected_y2}")
+print(f"Refleksi terhadap y=x: {reflected_yx}")
+
+# Visualisasi
+plt.figure(figsize=(10, 8))
+
+# Plot sumbu x=2 dan y=2
+plt.axvline(x=2, color='gray', linestyle='--', label='x=2')
+plt.axhline(y=2, color='gray', linestyle=':', label='y=2')
+
+# Plot garis y=x
+x = np.linspace(0, 5, 100)
+plt.plot(x, x, 'g--', label='y=x')
+
+# Plot titik-titik
+plt.scatter(*point, color='blue', label='Titik awal')
+plt.scatter(*reflected_x2, color='red', label='Refleksi x=2')
+plt.scatter(*reflected_y2, color='green', label='Refleksi y=2')
+plt.scatter(*reflected_yx, color='purple', label='Refleksi y=x')
+
+# Anotasi
+plt.text(point[0], point[1], f'  Original ({point[0]}, {point[1]})')
+plt.text(reflected_x2[0], reflected_x2[1], f'  x=2 ({reflected_x2[0]}, {reflected_x2[1]})')
+plt.text(reflected_y2[0], reflected_y2[1], f'  y=2 ({reflected_y2[0]}, {reflected_y2[1]})')
+plt.text(reflected_yx[0], reflected_yx[1], f'  y=x ({reflected_yx[0]}, {reflected_yx[1]})')
+
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Refleksi Titik terhadap Berbagai Sumbu')
+plt.grid(True)
+plt.axis('equal')
+plt.legend()
+plt.show()
+```
+
+### Output
+
+![image](https://hackmd.io/_uploads/rJ9L_8Plgg.png)
+
+
+### Penjelasan
+
+### Titik Awal
+Misalkan kita memiliki titik awal:
+$$
+P = \begin{pmatrix} x \\ y \end{pmatrix} = \begin{pmatrix} 3 \\ 4 \end{pmatrix}
+$$
+
+### 1. Refleksi terhadap Garis Vertikal $x = a$ (contoh: $x = 2$)
+
+#### Langkah-langkah:
+1. **Translasi**: Geser sistem koordinat sehingga garis $x = a$ menjadi sumbu baru
+
+   $$
+   P' = P - \begin{pmatrix} a \\ 0 \end{pmatrix} = \begin{pmatrix} 3-2 \\ 4 \end{pmatrix} = \begin{pmatrix} 1 \\ 4 \end{pmatrix}
+   $$
+
+2. **Refleksi**: Lakukan refleksi terhadap sumbu Y baru (matriks refleksi $x$)
+
+   $$
+   P'' = \begin{pmatrix} -1 & 0 \\ 0 & 1 \end{pmatrix} P' = \begin{pmatrix} -1 \times 1 \\ 1 \times 4 \end{pmatrix} = \begin{pmatrix} -1 \\ 4 \end{pmatrix}
+   $$
+
+3. **Translasi balik**: Kembalikan ke sistem koordinat asli
+
+   $$
+   P_{\text{refleksi}} = P'' + \begin{pmatrix} a \\ 0 \end{pmatrix} = \begin{pmatrix} -1+2 \\ 4 \end{pmatrix} = \begin{pmatrix} 1 \\ 4 \end{pmatrix}
+   $$
+
+#### Hasil:
+
+$$ \boxed{P_{\text{refl }x=2} = \begin{pmatrix} 1 \\ 4 \end{pmatrix}} $$
+
+#### 2. Refleksi terhadap Garis Horizontal $y = b$ (contoh: $y = 2$)
+
+#### Langkah-langkah:
+1. **Translasi**:
+
+   $$
+   P' = P - \begin{pmatrix} 0 \\ b \end{pmatrix} = \begin{pmatrix} 3 \\ 4-2 \end{pmatrix} = \begin{pmatrix} 3 \\ 2 \end{pmatrix}
+   $$
+
+2. **Refleksi** (matriks refleksi \( y \)):
+
+   $$
+   P'' = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} P' = \begin{pmatrix} 3 \\ -2 \end{pmatrix}
+   $$
+
+3. **Translasi balik**:
+
+   $$
+   P_{\text{refleksi}} = P'' + \begin{pmatrix} 0 \\ b \end{pmatrix} = \begin{pmatrix} 3 \\ -2+2 \end{pmatrix} = \begin{pmatrix} 3 \\ 0 \end{pmatrix}
+   $$
+
+#### Hasil:
+
+$$ \boxed{P_{\text{refl }y=2} = \begin{pmatrix} 3 \\ 0 \end{pmatrix}} $$
+
+### 3. Refleksi terhadap Garis $y = x$
+
+#### Langsung menggunakan matriks refleksi:
+
+$$
+P_{\text{refleksi}} = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix} P = \begin{pmatrix} 0 \times 3 + 1 \times 4 \\ 1 \times 3 + 0 \times 4 \end{pmatrix} = \begin{pmatrix} 4 \\ 3 \end{pmatrix}
+$$
+
+#### Hasil:
+
+$$ \boxed{P_{\text{refl }y=x} = \begin{pmatrix} 4 \\ 3 \end{pmatrix}} $$
